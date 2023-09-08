@@ -12,18 +12,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="Grey-Wind">
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="Announcement">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="https://announcement.zeabur.app/index.html">
 <meta property="og:site_name" content="Announcement">
 <meta property="og:locale">
 <meta property="article:author" content="Grey-Wind">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Announcement</title>
@@ -58,7 +62,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"announcement.zeabur.app","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":50,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -104,7 +108,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                <span>Startseite</span>
+                <span>首页</span>
               </a>
             </li>
           
@@ -116,7 +120,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                <span>Archiv</span>
+                <span>归档</span>
               </a>
             </li>
           
@@ -128,7 +132,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                <span>Kategorien</span>
+                <span>分类</span>
               </a>
             </li>
           
@@ -140,7 +144,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>Schlagwörter</span>
+                <span>标签</span>
               </a>
             </li>
           
@@ -152,7 +156,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                <span>Über</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -180,13 +184,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/background.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+            <span id="subtitle" data-typed-text="灰风的公告页面"></span>
           
         </div>
 
@@ -224,13 +228,46 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/08/hello-world/" target="_self">
+        <a href="/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/" target="_blank">
+          针对九龙冰室的预制菜行为的反馈
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/" target="_blank">
+        <div>
+          针对九龙冰室不负责任的预制菜行为的回应本人(即灰风，不方便透露名字)在2023年8月31日中午十二点左右于上海市长宁区南丰城B1九龙冰室就餐，共消费62元，购买了一份鸡扒饭与灯胆奶茶。 在鸡扒饭上桌后，我尝了一下，边缘的米饭是凉的，我误以为是边缘处凉的较快，在之后我吃到里面的饭也是凉的，我感到十分不可思议。 在饭点，作为一家连锁粤菜餐厅，竟然上了一盘预制菜给我，这令我十分不解与震撼。当然，鸡扒饭里
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-09-08 11:29" pubdate>
+              2023-09-08
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/09/08/hello-world/" target="_blank">
           Hello World
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/08/hello-world/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/08/hello-world/" target="_blank">
         <div>
           Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
         </div>
@@ -274,7 +311,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -282,7 +319,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -299,7 +336,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <!--<a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo</span> </a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <span>Fluid</span> </a>--> <a href="https://github.com/Grey-Wind" target="_blank" rel="nofollow noopener"> <span>Grey-Wind</span> </a> <i class="iconfont icon-love"></i> <a href="https://grey-wind.github.io/" target="_blank" rel="nofollow noopener"> <span>Sunrise Studio</span> </a> 
     </div>
   
   
@@ -368,7 +405,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
 </body>
 </html>
