@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Visual Basic调用Shell</title>
+    <link href="/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/"/>
+    <url>/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Visual-Basic调用Shell"><a href="#Visual-Basic调用Shell" class="headerlink" title="Visual Basic调用Shell"></a>Visual Basic调用Shell</h1><p>使用Visual Studio创建一个Visual Basic项目，本文以控制台项目演示。</p><p>输入以下代码</p><figure class="highlight plaintext"><figcaption><span>basic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs visual">Module Module1<br><br>    Sub Main()<br>        Shell(&quot;cmd.exe /c echo 1&amp;&amp;pause&quot;)<br>    End Sub<br><br>End Module<br></code></pre></td></tr></table></figure><p>Visual Studio可能自动生成了除shell以外的代码。</p><p>调整执行命令只需修改本代码段“echo 1”与“pause”即可。</p><hr><p>当然，以下是一个在 Windows 平台更好的方法。</p><p>代码如下：</p><figure class="highlight plaintext"><figcaption><span>basic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs visual">Dim command As String<br>command = &quot;dir&quot;<br><br>Dim shell As Object<br>Set shell = CreateObject(&quot;WScript.Shell&quot;)<br><br>Dim exec As Object<br>Set exec = shell.Exec(&quot;cmd /c &quot; &amp; command)<br><br>Do While exec.Status = 0<br>    WScript.Sleep 100<br>Loop<br><br>Dim output As String<br>output = exec.StdOut.ReadAll<br><br>WScript.Echo output<br></code></pre></td></tr></table></figure><p>这段示例代码将执行 dir 命令，并在控制台输出命令的结果。你可以将需要执行的命令赋值给 command 变量。</p><p>本代码使用了 Windows Script Host 对象模型，通过 CreateObject() 函数创建了一个 WScript.Shell 对象，并调用其 Exec() 方法来执行 cmd 命令。Exec() 方法返回一个 WshScriptExec 对象，该对象的 Status 属性表示当前命令执行状态，StdOut 属性是一个 TextStream 对象，可以读取命令的输出结果。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>各语言执行Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>针对九龙冰室的预制菜行为的反馈</title>
     <link href="/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/"/>
     <url>/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/</url>
