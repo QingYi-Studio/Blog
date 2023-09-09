@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>C执行Shell</title>
+    <link href="/2023/09/09/C%E6%89%A7%E8%A1%8CShell/"/>
+    <url>/2023/09/09/C%E6%89%A7%E8%A1%8CShell/</url>
+    
+    <content type="html"><![CDATA[<h1 id="C执行Shell"><a href="#C执行Shell" class="headerlink" title="C执行Shell"></a>C执行Shell</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">char</span> command[<span class="hljs-number">1000</span>] = <span class="hljs-string">&quot;dir&quot;</span>; <span class="hljs-comment">// 将要执行的 cmd 命令</span><br>    FILE *fp = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-type">char</span> res[<span class="hljs-number">1024</span>];<br><br>    fp = popen(command, <span class="hljs-string">&quot;r&quot;</span>); <span class="hljs-comment">// 执行命令，并打开读取管道</span><br>     <br>    <span class="hljs-keyword">if</span> (fp == <span class="hljs-literal">NULL</span>) &#123; <span class="hljs-comment">// 判断是否成功打开管道</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;运行命令失败\n&quot;</span>);<br>        <span class="hljs-built_in">exit</span>(<span class="hljs-number">1</span>);<br>    &#125;<br>     <br>    <span class="hljs-keyword">while</span> (fgets(res, <span class="hljs-keyword">sizeof</span>(res), fp) != <span class="hljs-literal">NULL</span>) &#123; <span class="hljs-comment">// 从管道中读取输出结果</span><br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, res);<br>    &#125;<br>    <br>    pclose(fp); <span class="hljs-comment">// 关闭管道</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure><p>这个示例代码将执行 dir 命令，并输出命令的输出结果。可以替换 command 变量的值为需要执行的命令。</p><p>这个实现使用了标准 C 库函数中的 popen() 和 pclose() 函数来执行命令和关闭读取管道。popen() 函数打开一个管道用于读取命令的输出，返回的文件指针 fp 可以用于读取管道中的内容。pclose() 函数关闭读取管道。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>各语言执行Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Visual Basic调用Shell</title>
     <link href="/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/"/>
     <url>/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/</url>
