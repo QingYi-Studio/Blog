@@ -1,2 +1,2 @@
 @echo off
-hexo generate
+hexo generate --silent
