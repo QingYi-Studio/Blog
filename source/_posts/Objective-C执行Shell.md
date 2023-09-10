@@ -11,7 +11,7 @@ tags:
 
 ## 使用NSTask类
 
-```objective-c
+```objc
 NSTask *task = [[NSTask alloc] init];
 [task setLaunchPath:@"/bin/sh"];
 [task setArguments:@[@"-c", @"ls -al"]];
