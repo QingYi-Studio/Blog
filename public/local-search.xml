@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Rust执行CMD</title>
+    <link href="/2023/09/10/Rust%E6%89%A7%E8%A1%8CShell/"/>
+    <url>/2023/09/10/Rust%E6%89%A7%E8%A1%8CShell/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Rust执行Shell"><a href="#Rust执行Shell" class="headerlink" title="Rust执行Shell"></a>Rust执行Shell</h1><p>使用Cargo创建一个Rust项目。</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">use</span> std::process::Command;  <br><br><span class="hljs-keyword">fn</span> <span class="hljs-title function_">main</span>() &#123;<br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">_</span> = Command::<span class="hljs-title function_ invoke__">new</span>(<span class="hljs-string">&quot;cmd.exe&quot;</span>).<span class="hljs-title function_ invoke__">arg</span>(<span class="hljs-string">&quot;/c&quot;</span>).<span class="hljs-title function_ invoke__">arg</span>(<span class="hljs-string">&quot;pause&quot;</span>).<span class="hljs-title function_ invoke__">status</span>();<br>&#125;<br></code></pre></td></tr></table></figure><p>可以将 .arg(“pause”) 中的内容替换为其他命令。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>各语言执行Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>C++执行Shell</title>
     <link href="/2023/09/09/C++%E6%89%A7%E8%A1%8CShell/"/>
     <url>/2023/09/09/C++%E6%89%A7%E8%A1%8CShell/</url>

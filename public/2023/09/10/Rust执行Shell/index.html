@@ -18,23 +18,34 @@
   <meta name="author" content="Grey-Wind">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="青衣的博客">
-<meta property="og:url" content="https://qingyi-blog.zeabur.app/index.html">
+    <meta name="description" content="Rust执行Shell使用Cargo创建一个Rust项目。 12345use std::process::Command;  fn main() &amp;#123;    let _ &#x3D; Command::new(&quot;cmd.exe&quot;).arg(&quot;&#x2F;c&quot;).arg(&quot;pause&quot;).status();&amp;#125;  可以将 .arg(“pause">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rust执行CMD">
+<meta property="og:url" content="https://qingyi-blog.zeabur.app/2023/09/10/Rust%E6%89%A7%E8%A1%8CShell/index.html">
 <meta property="og:site_name" content="青衣的博客">
+<meta property="og:description" content="Rust执行Shell使用Cargo创建一个Rust项目。 12345use std::process::Command;  fn main() &amp;#123;    let _ &#x3D; Command::new(&quot;cmd.exe&quot;).arg(&quot;&#x2F;c&quot;).arg(&quot;pause&quot;).status();&amp;#125;  可以将 .arg(“pause">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-09-10T09:39:55.000Z">
+<meta property="article:modified_time" content="2023-09-10T09:41:02.644Z">
 <meta property="article:author" content="Grey-Wind">
+<meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>青衣的博客</title>
+  <title>Rust执行CMD - 青衣的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -84,7 +95,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -190,17 +201,61 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="青衣的博客&lt;br&gt;&lt;br&gt;不定时更新编程知识&lt;br&gt;&lt;br&gt;偶尔会更新一些小文章或小说(短文)"></span>
+            <span id="subtitle" data-typed-text="Rust执行CMD"></span>
           
         </div>
 
         
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-10 17:39" pubdate>
+          September 10, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          198 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -212,330 +267,195 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Rust执行CMD</h1>
+            
+              <p class="note note-info">
                 
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/09/10/Rust%E6%89%A7%E8%A1%8CShell/" target="_blank">
-          Rust执行CMD
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/10/Rust%E6%89%A7%E8%A1%8CShell/" target="_blank">
-        <div>
-          Rust执行Shell使用Cargo创建一个Rust项目。 12345use std::process::Command;  fn main() &#123;    let _ = Command::new(&quot;cmd.exe&quot;).arg(&quot;/c&quot;).arg(&quot;pause&quot;).status();&#125;  可以将 .arg(“pause
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-10 17:39" pubdate>
-              2023-09-10
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+                  
+                    本文最后更新于：September 10, 2023 pm
+                  
+                
+              </p>
             
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%84%E8%AF%AD%E8%A8%80%E6%89%A7%E8%A1%8CShell/" class="category-chain-item">各语言执行Shell</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
+              <div class="markdown-body">
+                
+                <h1 id="Rust执行Shell"><a href="#Rust执行Shell" class="headerlink" title="Rust执行Shell"></a>Rust执行Shell</h1><p>使用Cargo创建一个Rust项目。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs rust"><span class="hljs-keyword">use</span> std::process::Command;  <br><br><span class="hljs-keyword">fn</span> <span class="hljs-title function_">main</span>() &#123;<br>    <span class="hljs-keyword">let</span> <span class="hljs-variable">_</span> = Command::<span class="hljs-title function_ invoke__">new</span>(<span class="hljs-string">&quot;cmd.exe&quot;</span>).<span class="hljs-title function_ invoke__">arg</span>(<span class="hljs-string">&quot;/c&quot;</span>).<span class="hljs-title function_ invoke__">arg</span>(<span class="hljs-string">&quot;pause&quot;</span>).<span class="hljs-title function_ invoke__">status</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/09/09/C++%E6%89%A7%E8%A1%8CShell/" target="_blank">
-          C++执行Shell
-        </a>
-      </h2>
+<p>可以将 .arg(“pause”) 中的内容替换为其他命令。</p>
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/09/C++%E6%89%A7%E8%A1%8CShell/" target="_blank">
-        <div>
-          C++执行Shell代码如下 12345678910#include &lt;iostream&gt;int main() &#123;    std::string command = &quot;dir&quot;; // 将要执行的 cmd 命令(例如ipconfig，ping等)    int result = system(command.c_str()); // 执行命令，并获得返回值
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-09 21:28" pubdate>
-              2023-09-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%84%E8%AF%AD%E8%A8%80%E6%89%A7%E8%A1%8CShell/" class="category-chain-item">各语言执行Shell</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/09/09/C%E6%89%A7%E8%A1%8CShell/" target="_blank">
-          C执行Shell
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/09/C%E6%89%A7%E8%A1%8CShell/" target="_blank">
-        <div>
-          C执行Shell1234567891011121314151617181920212223#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;int main() &#123;    char command[1000] = &quot;dir&quot;; // 将要执行的 cmd 命令    FILE *fp = NULL;    char res
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-09 21:22" pubdate>
-              2023-09-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%84%E8%AF%AD%E8%A8%80%E6%89%A7%E8%A1%8CShell/" class="category-chain-item">各语言执行Shell</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/" target="_blank">
-          Visual Basic调用Shell
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/" target="_blank">
-        <div>
-          Visual Basic调用Shell使用Visual Studio创建一个Visual Basic项目，本文以控制台项目演示。 输入以下代码 basic1234567Module Module1    Sub Main()        Shell(&quot;cmd.exe /c echo 1&amp;&amp;pause&quot;)    End SubEnd Module  Visual
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-09 19:39" pubdate>
-              2023-09-09
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%84%E8%AF%AD%E8%A8%80%E6%89%A7%E8%A1%8CShell/" class="category-chain-item">各语言执行Shell</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/" target="_blank">
-          针对九龙冰室的预制菜行为的反馈
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/08/%E9%92%88%E5%AF%B9%E4%B9%9D%E9%BE%99%E5%86%B0%E5%AE%A4%E7%9A%84%E9%A2%84%E5%88%B6%E8%8F%9C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E9%A6%88/" target="_blank">
-        <div>
-          针对九龙冰室不负责任的预制菜行为的回应本人(即灰风，不方便透露名字)在2023年8月31日中午十二点左右于上海市长宁区南丰城B1九龙冰室就餐，共消费62元，购买了一份鸡扒饭与灯胆奶茶。 在鸡扒饭上桌后，我尝了一下，边缘的米饭是凉的，我误以为是边缘处凉的较快，在之后我吃到里面的饭也是凉的，我感到十分不可思议。 在饭点，作为一家连锁粤菜餐厅，竟然上了一盘预制菜给我，这令我十分不解与震撼。当然，鸡扒饭里
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-08 11:29" pubdate>
-              2023-09-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%85%AC%E5%91%8A/" class="category-chain-item">公告</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%A4%90%E9%A5%AE/">#餐饮</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
-
-
-
+                
               </div>
-            </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%84%E8%AF%AD%E8%A8%80%E6%89%A7%E8%A1%8CShell/" class="category-chain-item">各语言执行Shell</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B/" class="print-no-link">#编程</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Rust执行CMD</div>
+      <div>https://qingyi-blog.zeabur.app/2023/09/10/Rust执行Shell/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Grey-Wind</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>September 10, 2023</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>September 10, 2023</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
           </div>
         </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
       </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -626,7 +546,102 @@
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
