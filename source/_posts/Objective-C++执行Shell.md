@@ -1,7 +1,10 @@
 ---
 title: Objective-C++执行Shell
 date: 2023-09-10 22:58:22
+categories:
+- 各语言执行Shell
 tags:
+- 编程
 ---
 
 # Objective-C++执行Shell
