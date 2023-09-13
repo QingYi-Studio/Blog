@@ -1,6 +1,7 @@
 ---
 title: Rust执行CMD
 date: 2023-09-10 17:39:55
+author: "Grey-Wind"
 categories:
 - 各语言执行Shell
 tags:

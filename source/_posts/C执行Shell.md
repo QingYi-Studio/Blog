@@ -1,6 +1,7 @@
 ---
 title: C执行Shell
 date: 2023-09-09 21:22:18
+author: "Grey-Wind"
 categories:
 - 各语言执行Shell
 tags:

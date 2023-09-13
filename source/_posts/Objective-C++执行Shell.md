@@ -1,6 +1,7 @@
 ---
 title: Objective-C++执行Shell
 date: 2023-09-10 22:58:22
+author: "Grey-Wind"
 categories:
 - 各语言执行Shell
 tags:
