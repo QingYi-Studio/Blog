@@ -1,15 +1,15 @@
 ---
-title: Visual Basic调用Shell
+title: Visual Basic执行Shell
 date: 2023-09-09 19:39:11
 author: "Grey-Wind"
-excerpt: "这是文章的摘要内容。"
+excerpt: "使用Shell或Windows Script Host对象模型来执行Shell。"
 categories:
 - 各语言执行Shell
 tags:
 - 编程
 ---
 
-# Visual Basic调用Shell
+# Visual Basic执行Shell
 
 使用Visual Studio创建一个Visual Basic项目，本文以控制台项目演示。
 
@@ -31,7 +31,7 @@ Visual Studio可能自动生成了除shell以外的代码。
 
 ------
 
-当然，以下是一个自定义度更高的方法。
+当然，以下是一个自定义度更高的方法，读取输出也更加方便，但是仅限Windows平台。
 
 代码如下：
 
