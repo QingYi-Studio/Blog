@@ -2,6 +2,7 @@
 title: C执行Shell
 date: 2023-09-09 21:22:18
 author: "Grey-Wind"
+excerpt: "使用了标准C语言库函数中的popen()和pclose()函数来执行命令和关闭读取管道。"
 categories:
 - 各语言执行Shell
 tags:
