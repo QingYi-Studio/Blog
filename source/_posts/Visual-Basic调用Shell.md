@@ -2,6 +2,7 @@
 title: Visual Basic调用Shell
 date: 2023-09-09 19:39:11
 author: "Grey-Wind"
+excerpt: "这是文章的摘要内容。"
 categories:
 - 各语言执行Shell
 tags:
@@ -30,7 +31,7 @@ Visual Studio可能自动生成了除shell以外的代码。
 
 ------
 
-当然，以下是一个在 Windows 平台更好的方法。
+当然，以下是一个自定义度更高的方法。
 
 代码如下：
 

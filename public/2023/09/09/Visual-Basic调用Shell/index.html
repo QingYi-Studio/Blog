@@ -18,15 +18,15 @@
   <meta name="author" content="Grey-Wind">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Visual Basic调用Shell使用Visual Studio创建一个Visual Basic项目，本文以控制台项目演示。 输入以下代码 basic1234567Module Module1    Sub Main()        Shell(&quot;cmd.exe &#x2F;c echo 1&amp;&amp;pause&quot;)    End SubEnd Module  Visual">
+    <meta name="description" content="这是文章的摘要内容。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Visual Basic调用Shell">
 <meta property="og:url" content="https://qingyi-blog.zeabur.app/2023/09/09/Visual-Basic%E8%B0%83%E7%94%A8Shell/index.html">
 <meta property="og:site_name" content="青衣的博客">
-<meta property="og:description" content="Visual Basic调用Shell使用Visual Studio创建一个Visual Basic项目，本文以控制台项目演示。 输入以下代码 basic1234567Module Module1    Sub Main()        Shell(&quot;cmd.exe &#x2F;c echo 1&amp;&amp;pause&quot;)    End SubEnd Module  Visual">
+<meta property="og:description" content="这是文章的摘要内容。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2023-09-09T11:39:11.000Z">
-<meta property="article:modified_time" content="2023-09-13T14:45:22.500Z">
+<meta property="article:modified_time" content="2023-09-14T00:51:32.779Z">
 <meta property="article:author" content="Grey-Wind">
 <meta property="article:tag" content="编程">
 <meta name="twitter:card" content="summary_large_image">
@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          783 字
+          777 字
         
       </span>
     
@@ -303,7 +303,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：September 13, 2023 pm
+                    本文最后更新于：September 14, 2023 am
                   
                 
               </p>
@@ -318,7 +318,7 @@
 <p>Visual Studio可能自动生成了除shell以外的代码。</p>
 <p>调整执行命令只需修改本代码段“echo 1”与“pause”即可。</p>
 <hr>
-<p>当然，以下是一个在 Windows 平台更好的方法。</p>
+<p>当然，以下是一个自定义度更高的方法。</p>
 <p>代码如下：</p>
 <figure class="highlight plaintext"><figcaption><span>basic</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs visual">Dim command As String<br>command = &quot;dir&quot;<br><br>Dim shell As Object<br>Set shell = CreateObject(&quot;WScript.Shell&quot;)<br><br>Dim exec As Object<br>Set exec = shell.Exec(&quot;cmd /c &quot; &amp; command)<br><br>Do While exec.Status = 0<br>    WScript.Sleep 100<br>Loop<br><br>Dim output As String<br>output = exec.StdOut.ReadAll<br><br>WScript.Echo output<br></code></pre></td></tr></table></figure>
 
@@ -388,7 +388,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>September 13, 2023</div>
+          <div>September 14, 2023</div>
         </div>
       
       
