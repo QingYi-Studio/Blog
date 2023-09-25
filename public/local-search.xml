@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>将安卓XML图标转换成SVG图片</title>
+    <link href="/2023/09/25/%E5%B0%86%E5%AE%89%E5%8D%93XML%E5%9B%BE%E6%A0%87%E8%BD%AC%E6%8D%A2%E6%88%90SVG%E5%9B%BE%E7%89%87/"/>
+    <url>/2023/09/25/%E5%B0%86%E5%AE%89%E5%8D%93XML%E5%9B%BE%E6%A0%87%E8%BD%AC%E6%8D%A2%E6%88%90SVG%E5%9B%BE%E7%89%87/</url>
+    
+    <content type="html"><![CDATA[<h1 id="将安卓XML图标转换成SVG图片"><a href="#将安卓XML图标转换成SVG图片" class="headerlink" title="将安卓XML图标转换成SVG图片"></a>将安卓XML图标转换成SVG图片</h1><p>首先要明确的是，安卓<code>XML</code>格式的图标其实是<code>XML</code>矢量图片，与SVG图片及其类似，同根同源。</p><h2 id="介绍SVG"><a href="#介绍SVG" class="headerlink" title="介绍SVG"></a>介绍SVG</h2><p>缩放矢量图形（英语：Scalable Vector Graphics，即SVG）是一种基于可扩展标记语言<code>XML</code>，用于描述二维矢量图形的图形格式。</p><p>.svg格式相对于.jpg、.png甚至.webp具有较多优势：</p><ul><li><p>图像与分辨率无关，不会变形，适配安卓的各种分辨率；</p></li><li><p>省空间。体积小，一般复杂图像也能在100KB内搞定，图标更不在话下。</p></li></ul><h2 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h2><h3 id="手动转换"><a href="#手动转换" class="headerlink" title="手动转换"></a>手动转换</h3><ol><li>将头部的：</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;utf-8&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">vector</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span><br></code></pre></td></tr></table></figure><p>替换成</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.w3.org/2000/svg&quot;</span></span><br></code></pre></td></tr></table></figure><p>闭标签也做相应修改。</p><ol start="2"><li><p>将<code>android:width</code>替换成<code>width</code></p></li><li><p>将<code>android:height</code>替换成<code>height</code></p></li><li><p>将<code>android:pathData</code>替换成<code>d</code></p></li><li><p>将<code>android:fillColor</code>替换成<code>fill</code></p></li></ol><p>如果没有<code>android:fillcolor</code>的话，要加上<code>fill=&quot;#ffffff&quot;</code></p><ol start="6"><li>将<code>android:viewportHeight=&quot;24&quot; android:viewportWidth=&quot;24&quot;</code>替换成<code>viewBox=&quot;0 0 24 24&quot;</code>的形式。</li></ol><h3 id="自动转换"><a href="#自动转换" class="headerlink" title="自动转换"></a>自动转换</h3><p>显而易见，手动转换及其的费时费力，且易出差错。</p><p>我将带来我个人开发的全自动图标转换器：<a href="https://qingyi-studio.gitee.io/imageconvert">Image Convert</a></p><p>目前项目稳定运行，服务器开销不小，大家多多支持。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>C# WPF(.NET Framework)窗口使用HTML页面</title>
     <link href="/2023/09/13/C-WPF-NET-Framework-%E7%AA%97%E5%8F%A3%E4%BD%BF%E7%94%A8HTML%E9%A1%B5%E9%9D%A2/"/>
     <url>/2023/09/13/C-WPF-NET-Framework-%E7%AA%97%E5%8F%A3%E4%BD%BF%E7%94%A8HTML%E9%A1%B5%E9%9D%A2/</url>
