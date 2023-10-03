@@ -4,11 +4,30 @@
   
   
   <entry>
+    <title>站点归档</title>
+    <link href="/2023/10/03/%E7%AB%99%E7%82%B9%E5%BD%92%E6%A1%A3/"/>
+    <url>/2023/10/03/%E7%AB%99%E7%82%B9%E5%BD%92%E6%A1%A3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="站点归档"><a href="#站点归档" class="headerlink" title="站点归档"></a>站点归档</h1><details>    <summary>青衣小说网</summary>    <a class="level1" href="https://grey-wind.github.io/Novels/">GitHub Pages</a>    <br>    <a class="level1" href="https://qingyi-novels.zeabur.app/">Zeabur</a>    <details>        <summary class="level1">Vercel</summary>        <a class="level2" href="https://qingyi-novels.vercel.app/">链接1</a>        <br>        <a class="level2" href="https://novels-grey-wind.vercel.app/">链接2</a>        <br>        <a class="level2" href="https://novels-git-main-grey-wind.vercel.app/">链接3</a>    </details></details><details>    <summary>青衣的博客</summary>    <a class="level1" href="https://grey-wind.github.io/Blog/">GitHub Pages</a>    <br>    <a class="level1" href="https://qingyi-blog.zeabur.app/">Zeabur</a>    <details>        <summary class="level1">Vercel</summary>        <a class="level2" href="https://qy-blog.vercel.app/">链接1</a>        <br>        <a class="level2" href="https://blog-grey-wind.vercel.app/">链接2</a>        <br>        <a class="level2" href="https://blog-git-main-grey-wind.vercel.app/">链接3</a>    </details>    <a class="level1" href="https://qingyi-studio.gitee.io/">Gitee</a></details><details>    <summary>图片转换器</summary>    <a class="level1" href="https://grey-wind.github.io/ImageConvert/">GitHub Pages</a>    <br>    <a class="level1" href="https://image-convert.zeabur.app/">Zeabur</a>    <details>        <summary class="level1">Vercel</summary>        <a class="level2" href="https://image-convert.vercel.app/">链接1</a>        <br>        <a class="level2" href="https://image-convert-grey-wind.vercel.app/">链接2</a>        <br>        <a class="level2" href="https://image-convert-git-main-grey-wind.vercel.app/">链接3</a>    </details>    <a class="level1" href="https://qingyi-studio.gitee.io/imageconvert/">Gitee</a></details><style>.level1 {    padding-left: 3%;    padding-right: 3%;    padding: 0 3%;}.level2 {    padding-left: 5%;    padding-right: 5%;    padding: 0 5%;}</style>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>网站</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>图片转换器(ImageConverter)站点正式公测</title>
     <link href="/2023/10/02/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2%E5%99%A8%E7%AB%99%E7%82%B9%E6%AD%A3%E5%BC%8F%E5%85%AC%E6%B5%8B/"/>
     <url>/2023/10/02/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2%E5%99%A8%E7%AB%99%E7%82%B9%E6%AD%A3%E5%BC%8F%E5%85%AC%E6%B5%8B/</url>
     
-    <content type="html"><![CDATA[<h1 id="图片转换器-ImageConverter-站点正式公测"><a href="#图片转换器-ImageConverter-站点正式公测" class="headerlink" title="图片转换器(ImageConverter)站点正式公测"></a>图片转换器(ImageConverter)站点正式公测</h1><p>针对目前市面上图片转换器数不胜数，但做到无广告且可以简易使用的站点较少的情况，灰风和青衣在探讨后制作了一个永久免费无广告的公益网站——Image Converter。</p><p>该网站支持的转换如下：</p><ul><li><input checked="" disabled="" type="checkbox"> 安卓XML图标转换SVG</li><li><input checked="" disabled="" type="checkbox"> SVG图像转换PNG</li><li><input disabled="" type="checkbox"> JPG图像转换PNG</li><li><input disabled="" type="checkbox"> JPEG图像转换PNG</li><li><input disabled="" type="checkbox"> TIF图像转换PNG</li><li><input disabled="" type="checkbox"> WEBP图像转换PNG</li><li><input disabled="" type="checkbox"> BMP图像转换PNG</li></ul><p>以上转换方式均不会把图片上传到服务器与站点仓库，所有的图片读取与处理都使用<code>HTML5</code>+<code>JavaScript</code>来进行。</p><p>本网站全公益、开源，但是目前由于技术水平与时间限制，不考虑适配手机版，如果有大佬尝试适配，我感激不尽。</p><p>本网站暂不支持点击转换框选择文件，需要手动拖入文件，如有大佬前来制作相关功能，我会十分开心的。</p><p>目前该网站有多个站点：</p><p><a href="https://grey-wind.github.io/ImageConvert/">GitHub官方仓库</a></p><details><summary>Vercel镜像站</summary><style>.vercel {padding-left: 2%;padding-right: 2%;padding: 0 2%;}</style><a class="vercel">三个链接的指向都是一样的，一般来说建议第一个</a><br><a class="vercel" href="https://image-convert.vercel.app/">1号链接</a><br><a class="vercel" href="https://image-convert-grey-wind.vercel.app/">2号链接</a><br><a class="vercel" href="https://image-convert-git-main-grey-wind.vercel.app/">3号链接</a></details>[Zeabur镜像站](https://image-convert.zeabur.app/)<p><a href="https://qingyi-studio.gitee.io/imageconvert/">Gitee镜像站</a></p><p>GitHub和Vercel是构建最快的，我也不需要花钱，但是为了中国用户，所以我建立了Zeabur镜像站，Zeabur镜像站是有服务器成本的，所以我希望你们不要攻击这个站点好不好，实在想要追求速度去Gitee上使用吧，Gitee的问题就是同步慢，版权信息显示不了，别的都是正常的。</p><p>感谢各位支持，希望各位多多赞助。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="图片转换器-ImageConverter-站点正式公测"><a href="#图片转换器-ImageConverter-站点正式公测" class="headerlink" title="图片转换器(ImageConverter)站点正式公测"></a>图片转换器(ImageConverter)站点正式公测</h1><p>针对目前市面上图片转换器数不胜数，但做到无广告且可以简易使用的站点较少的情况，灰风和青衣在探讨后制作了一个永久免费无广告的公益网站——Image Converter。</p><p>该网站支持的转换如下：</p><ul><li><input checked="" disabled="" type="checkbox"> 安卓XML图标转换SVG</li><li><input checked="" disabled="" type="checkbox"> SVG图像转换PNG</li><li><input disabled="" type="checkbox"> JPG图像转换PNG</li><li><input disabled="" type="checkbox"> JPEG图像转换PNG</li><li><input disabled="" type="checkbox"> TIF图像转换PNG</li><li><input disabled="" type="checkbox"> WEBP图像转换PNG</li><li><input disabled="" type="checkbox"> BMP图像转换PNG</li></ul><p>以上转换方式均不会把图片上传到服务器与站点仓库，所有的图片读取与处理都使用<code>HTML5</code>+<code>JavaScript</code>来进行。</p><p>本网站全公益、开源，但是目前由于技术水平与时间限制，不考虑适配手机版，如果有大佬尝试适配，我感激不尽。</p><p>本网站暂不支持点击转换框选择文件，需要手动拖入文件，如有大佬前来制作相关功能，我会十分开心的。</p><p>目前该网站有多个站点：</p><p><a href="https://grey-wind.github.io/ImageConvert/">GitHub官方仓库</a></p><details><summary>Vercel镜像站</summary><style>.vercel {padding-left: 3%;padding-right: 3%;padding: 0 3%;}</style><a class="vercel">三个链接的指向都是一样的，一般来说建议第一个</a><br><a class="vercel" href="https://image-convert.vercel.app/">1号链接</a><br><a class="vercel" href="https://image-convert-grey-wind.vercel.app/">2号链接</a><br><a class="vercel" href="https://image-convert-git-main-grey-wind.vercel.app/">3号链接</a></details><p><a href="https://image-convert.zeabur.app/">Zeabur镜像站</a></p><p><a href="https://qingyi-studio.gitee.io/imageconvert/">Gitee镜像站</a></p><p>GitHub和Vercel是构建最快的，我也不需要花钱，但是为了中国用户，所以我建立了Zeabur镜像站，Zeabur镜像站是有服务器成本的，所以我希望你们不要攻击这个站点好不好，实在想要追求速度去Gitee上使用吧，Gitee的问题就是同步慢，版权信息显示不了，别的都是正常的。</p><p>感谢各位支持，希望各位多多赞助。</p>]]></content>
     
     
     
