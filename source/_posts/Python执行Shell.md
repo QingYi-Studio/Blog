@@ -4,6 +4,7 @@ date: 2023-09-10 21:14:47
 author: "Grey-Wind"
 categories:
 - 各语言执行Shell
+- Python
 tags:
 - 编程
 ---
