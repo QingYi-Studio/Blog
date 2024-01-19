@@ -1,14 +1,15 @@
 ---
-title: 函数签名的详解
+title: 针对ctypes的函数签名的详解
 date: 2023-11-05 16:06:45
 author: "Grey-Wind"
+description: 从定义到类型再到参数详细解析Python中ctypes的函数签名，并附有完整示例代码参阅。
 categories:
 - Python
 tags:
 - 编程
 ---
 
-# 函数签名的详解
+# 针对*ctypes*的函数签名的详解
 
 在使用`ctypes`调用动态链接库时，定义函数签名是非常重要的。函数签名可以告诉Python解释器如何正确地调用动态链接库中的函数，包括传递参数和获取返回值的方式。
 

@@ -1,6 +1,7 @@
 ---
 title: 如何制作自己的VPN
 date: 2023-12-15 18:08:50
+description: 使用Shadowsocks(ss)或OpenVPN来配置VPN，并有根据不同用户来进行分类配置。
 tags:
 - VPN
 - 翻墙
