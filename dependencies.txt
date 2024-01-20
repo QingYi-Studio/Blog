@@ -1,3 +1,7 @@
 hexo
 hexo-cli
 hexo-theme-fluid
+vue
+@vue/cli
+webpack
+webpack-cli
