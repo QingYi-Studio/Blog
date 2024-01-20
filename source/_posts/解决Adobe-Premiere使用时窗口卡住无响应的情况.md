@@ -22,7 +22,14 @@ tags:
 
 2. 下载旧版本驱动
 
-   1. 打开N卡驱动网站：https://www.nvidia.cn/geforce/drivers/
+   1. [N卡驱动网站](https://www.nvidia.cn/geforce/drivers/)
+
+      [高级搜索](https://www.nvidia.cn/Download/Find.aspx)
+
+      <details>
+          <summary>对应表</summary>
+          2022 → <a href="https://cn.download.nvidia.cn/Windows/527.56/527.56-notebook-win10-win11-64bit-international-nsd-dch-whql.exe">笔记本30系</a>|<a href="https://cn.download.nvidia.cn/Windows/527.56/527.56-notebook-win10-win11-64bit-international-nsd-dch-whql.exe">台式机30系</a>
+      </details>
 
    2. 搜索需要的驱动，下载你需要的那个
 
