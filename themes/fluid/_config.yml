@@ -250,7 +250,7 @@ web_analytics:  # 网页访问统计
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
   # Baidu analytics, get the string behind `hm.js?`
   # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
-  baidu: b0ce01c38359dfd24df4e5add2799db5
+  baidu: 01669a7d77c10e9a53900226175fe9d1
 
   # Google Analytics 4 的媒体资源 ID
   # Google Analytics 4 MEASUREMENT_ID
@@ -1039,17 +1039,17 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
+    enable: true
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
+    type: changyan
 
 
 #---------------------------
