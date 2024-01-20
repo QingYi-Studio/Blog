@@ -1,2 +1,2 @@
-@echo off
-hexo generate --silent
+@echo on
+hexo generate
