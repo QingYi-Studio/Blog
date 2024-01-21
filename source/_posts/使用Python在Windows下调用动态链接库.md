@@ -6,6 +6,7 @@ categories:
 - Python
 tags:
 - 编程
+- Python
 ---
 
 # 使用Python在Windows下调用动态链接库

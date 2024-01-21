@@ -7,6 +7,7 @@ categories:
 - Python
 tags:
 - 编程
+- Python
 ---
 
 # Python执行Shell
