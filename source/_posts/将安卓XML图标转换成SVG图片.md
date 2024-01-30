@@ -4,7 +4,7 @@ date: 2023-09-25 18:54:54
 author: "Grey-Wind"
 tags:
 - 编程
-- 安卓
+- Android
 ---
 
 # 将安卓XML图标转换成SVG图片

@@ -7,6 +7,7 @@ categories:
 - 各语言执行Shell
 tags:
 - 编程
+- Visual Basic
 ---
 
 # Visual Basic执行Shell

@@ -6,6 +6,7 @@ categories:
 - 各语言执行Shell
 tags:
 - 编程
+- Scala
 ---
 
 # Scala执行Shell
