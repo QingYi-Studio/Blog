@@ -754,10 +754,10 @@ post:
 utterances:
   repo: QingYi-Studio/Blog
   issue_term: title
-  label: comment
+  label: blog-comment
   theme: github-light
   theme_dark: github-dark
-#<script src="https://utteranc.es/client.js" repo="QingYi-Studio/Blog" issue-term="title" label="comment" theme="github-light" crossorigin="anonymous" async></script>
+#<script src="https://utteranc.es/client.js" repo="QingYi-Studio/Blog" issue-term="title" label="blog-comment" theme="github-light" crossorigin="anonymous" async></script>
 
 # Disqus
 # 基于第三方的服务，国内用户直接使用容易被墙，建议配合 Disqusjs
