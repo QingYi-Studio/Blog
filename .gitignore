@@ -128,3 +128,4 @@ dist
 
 # Hexo
 /public
+db.json
