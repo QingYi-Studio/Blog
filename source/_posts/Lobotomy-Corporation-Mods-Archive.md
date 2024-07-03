@@ -5,7 +5,6 @@ description: 一些优良脑叶公司模组的归档
 tags:
 - 游戏
 - LobotomyCorporation
-sticky: 90
 ---
 
 # 脑叶公司模组归档
