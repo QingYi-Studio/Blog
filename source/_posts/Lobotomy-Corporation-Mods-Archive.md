@@ -32,7 +32,7 @@ sticky: 90
 
 工作成功后收到礼物的几率增加2×(5% * 2 = 10%)。如果员工收到礼物，那么接收的机会将再次变为默认。
 
-[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/GiftChanceBoost.rar)
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/GiftChanceBoost.zip)
 
 ## [无限刷新异想体 - Infinite Abnormality Extraction](https://www.nexusmods.com/lobotomycorporation/mods/77)
 
@@ -40,7 +40,7 @@ sticky: 90
 
 如何安装:把abcdcode_InfiReExtract_MOD文件夹(gamedata)\ lobotomycorpor_data\BaseMods
 
-[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/InfiniteAbnormalityExtraction.rar)
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/InfiniteAbnormalityExtraction.zip)
 
 ## [未制作的EGO - The Lost E.G.O](https://www.nexusmods.com/lobotomycorporation/mods/9)
 
@@ -68,6 +68,41 @@ https://discord.gg/trBke3znaV
 
 [Download](https://file.qingyi-studio.top/LobotomyCorporationMod/CriminalShadow.rar)
 
+## [十倍速 - TT10](https://www.nexusmods.com/lobotomycorporation/mods/49)
+
+本mod添加了“高速模式”。
+按“=”进入高速模式，再次按“=”即可退出高速模式。
+在高速模式下，原1倍速变为3倍速，原1.5倍速变为5倍速，原2倍速变为10倍速。
+可能会影响天启鸟与白夜，但是不会影响Hokma的能力。
+
+注意：高速模式下一些会控制员工的异想体可能会bug，导致员工一直处于被控制状态。（例如汽水不放人）
+
+（需要BaseMod）
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/TT10.zip)
+
+## [时间停止 - Time To Stop](https://www.nexusmods.com/lobotomycorporation/mods/89)
+
+这个mod允许你在白夜，天启鸟，Binah(锁妈)，Hokma(记录部核心抑制)战斗中使用暂停
+
+你会因为使用暂停而受到惩罚。
+- 白夜在暂停后会回复10%的生命值
+- 天启鸟的苍白攻击会造成两次伤害。
+- 在第三阶段暂停后，Binah(锁妈)会回复10%的生命值。
+- Hokma(记录部核心抑制)会对随机的特工造成伤害基于电流过载等级的损坏。
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/TimeStop.zip)
+
+## [四倍速工作 - 4X Work Speed](https://www.nexusmods.com/lobotomycorporation/mods/20)
+
+工作速度有时会很慢，特别是在处理WAW或ALEPH异常时。有了这个模组，为每个可工作的异常设定为4倍的初始设定工作速度。
+
+**注意：**谨慎配合TT10使用，速度过快有可能导致员工一直处于被控制状态
+
+[四倍速度 Download](https://file.qingyi-studio.top/LobotomyCorporationMod/4XWork.zip)
+
+[四倍速度与一半冷却时间 Download](https://file.qingyi-studio.top/LobotomyCorporationMod/4XWork_HalfCooldown.zip)
+
 ## [永恒的微笑 - Eternal Smile](https://www.nexusmods.com/lobotomycorporation/mods/340)
 
 添加了新异想体
@@ -82,7 +117,7 @@ https://discord.gg/trBke3znaV
 
 完成一个考验会使所有员工的属性增长和获得EGO的饰品概率在当天的剩余时间内提高50%。
 
-发现它太慢了升级，我寻找mod，并在下面的谷歌文档中找到这个:
+发现它升级太慢了，我寻找mod，并在下面的谷歌文档中找到这个:
 https://docs.google.com/document/d/1-Rkj7rxfN1duvi29c7BwYenGs3XY_t_3CmLRvUJ8mTU/edit
 
 在这个文档中还有其他的mod
@@ -90,6 +125,40 @@ https://docs.google.com/document/d/1-Rkj7rxfN1duvi29c7BwYenGs3XY_t_3CmLRvUJ8mTU/
 如何安装:把这个mod文件夹(gamedata)\lobotomycorpor_data\BaseMods
 
 [Download](https://file.qingyi-studio.top/LobotomyCorporationMod/RewardingOrdeals.zip)
+
+## 链接EGO饰品 - LinkEGOGift
+
+允许你将EGO饰品链接在EGO护甲或武器上，当穿上该EGO护甲或武器，将自动获得该饰品。
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/LinkEGOGift.rar)
+
+## [全装备上限5 - Universal 5 Max EGO](https://www.nexusmods.com/lobotomycorporation/mods/382)
+
+把所有EGO的最大研发上限调整为5(包括模组装备)。
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/Universal5MaxEGO.zip)
+
+## [内存泄漏优化 - Optimization Mod](https://www.nexusmods.com/lobotomycorporation/mods/57)
+
+修复内存泄漏的问题，优化游戏运行。
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/Optimization.7z)
+
+## [长河 - Long River](https://www.nexusmods.com/lobotomycorporation/mods/345)
+
+CN,EN,JP,KR,RU
+作者：银莲，B站：
+https://space.bilibili.com/3461582992443524/?spm_id_from=333.999.0.0
+动画：万景
+EGO贴图：小马
+数值策划：穿着熊
+其他贴图：埃米尔
+Discord:
+https://discord.gg/trBke3znaV
+
+**归档者评语：**逝者如斯夫，不舍昼夜。时间的力量令人叹为观止。
+
+[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/LongRiver.rar)
 
 ## [艾登的花园 - Garden of Eden](https://www.nexusmods.com/lobotomycorporation/mods/360)
 
@@ -107,12 +176,6 @@ This mod is not compatible with any other mods that modify the files within Lobo
 
 [Download CN v1](https://file.qingyi-studio.top/LobotomyCorporationMod/GardenEden_CN.zip)
 
-## LinkEGOGift
-
-允许你将EGO饰品链接在EGO护甲或武器上，当穿上该EGO护甲或武器，将自动获得该饰品。
-
-[Download](https://file.qingyi-studio.top/LobotomyCorporationMod/LinkEGOGift.rar)
-
 ## 以下为未找到模组文件的模组
 
 ### [EGO-Plus/EGO+](https://www.nexusmods.com/lobotomycorporation/mods/112)
@@ -123,3 +186,22 @@ This mod is not compatible with any other mods that modify the files within Lobo
 名字本来是EGO+，可惜N网不让写“+”。
 添加了20+的原创/自制EGO。
 装备ID在压缩包内的“使用说明”中。
+
+## 个人使用
+
+- [BaseMod](#核心模组-Base-Mod)
+- [TT10](#十倍速-TT10)
+- [TimeStop](#时间停止-Time-To-Stop)
+- [TheLostEGO](#未制作的EGO-The-Lost-E-G-O)
+- [RewardingOrdeals](#更高的属性增长-Rewarding-Ordeals-by-IbulIsBest-higer-state-growth)
+- [PermanentAgents](#永久的员工-Permanent-Agents)
+- [MoreDetailedInfo](#更多详细信息-More-Detailed-Info)
+- [LinkEGOGift](#链接EGO饰品-LinkEGOGift)
+- [InfiniteAbnormalityExtraction](#无限刷新异想体-Infinite-Abnormality-Extraction)
+- [GiftChanceBoost](#提高获得饰品概率-Gift-Chance-Boost)
+- [EternalSmile](#永恒的微笑-Eternal-Smile)
+- [CriminalShadow](#昨日罪影-Criminal-Shadow)
+- [4XWork_HalfCooldown](#四倍速工作-4X-Work-Speed)
+- [Universal5MaxEGO](#全装备上限5-Universal-5-Max-EGO)
+- [Optimization](#内存泄漏优化-Optimization-Mod)
+
