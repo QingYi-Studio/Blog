@@ -1,13 +1,17 @@
 ---
-title: 解决Adobe Premiere使用时窗口卡住无响应的情况
+title: 解决Adobe Premiere Pro使用时窗口卡住无响应的情况
 date: 2024-01-17 17:17:29
 description: 通过回滚显卡驱动或更换PR使用的显卡来解决窗口卡死的问题。
+categories:
+- Adobe
+- Premiere Pro
 tags:
 - Adobe
+- Premiere Pro
 - 视频剪辑
 ---
 
-# 解决Adobe Premiere使用时窗口卡住无响应的情况
+# 解决Adobe Premiere Pro使用时窗口卡住无响应的情况
 
 ## 情况1 显卡驱动问题
 

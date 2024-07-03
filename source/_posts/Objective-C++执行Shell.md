@@ -6,7 +6,7 @@ categories:
 - 各语言执行Shell
 tags:
 - 编程
-- Objective-Cpp
+- Objective-C++
 ---
 
 # Objective-C++执行Shell
