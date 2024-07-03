@@ -293,7 +293,7 @@ web_analytics:  # 网页访问统计
 # 对页面中的图片和评论插件进行懒加载处理，可见范围外的元素不会提前加载
 # Lazy loading of images and comment plugin on the page
 lazyload:
-  enable: false
+  enable: true
 
   # 加载时的占位图片
   # The placeholder image when loading
@@ -345,8 +345,8 @@ navbar:
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -545,7 +545,7 @@ post:
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
-  default_index_img: /img/avatar.png
+  default_index_img: # /img/avatar.png
 
   # 文章标题下方的元信息
   # Meta information below title
@@ -754,10 +754,10 @@ post:
 utterances:
   repo: QingYi-Studio/Blog
   issue_term: title
-  label: comment
+  label: blog-comment
   theme: github-light
   theme_dark: github-dark
-#<script src="https://utteranc.es/client.js" repo="QingYi-Studio/Blog" issue-term="title" label="comment" theme="github-light" crossorigin="anonymous" async></script>
+#<script src="https://utteranc.es/client.js" repo="QingYi-Studio/Blog" issue-term="title" label="blog-comment" theme="github-light" crossorigin="anonymous" async></script>
 
 # Disqus
 # 基于第三方的服务，国内用户直接使用容易被墙，建议配合 Disqusjs

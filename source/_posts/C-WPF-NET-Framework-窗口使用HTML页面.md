@@ -2,6 +2,8 @@
 title: C# WPF(.NET Framework)窗口使用HTML页面
 date: 2023-09-13 21:42:58
 author: "Grey-Wind"
+categories:
+- CefSha
 tags:
 - 编程
 - C-Sharp
@@ -143,7 +145,7 @@ namespace WebBrowserExample
 例如：
 
 ```xml
-<WebBrowser x:Name="webBrowser" Address="https://sunrise-studio.gitee.io/" />
+<WebBrowser x:Name="webBrowser" Address="https://blog.qingyi-studio.top/" />
 ```
 
 简单吧，但是不方便修改，这个只适合最简单基础的。
@@ -350,15 +352,3 @@ namespace CefSharpDemo
 在窗口关闭时，我们调用`Cef.Shutdown`方法来关闭CefSharp引擎。
 
 请注意，我们使用了`Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase)`方法来获取当前目录的路径，而不是`Environment.CurrentDirectory`。这是因为当应用程序启动时，`Environment.CurrentDirectory`可能不是期望的路径。当然，如果你不在意的话，用`Environment.CurrentDirectory`也是可以的
-
-### 直接加载(无C#代码)
-
-填写窗口XAML文件`cefSharp`中的`Address`。
-
-例如：
-
-```xml
-<cefSharp:ChromiumWebBrowser x:Name="webBrowser" Address="https://sunrise-studio.gitee.io/" />
-```
-
-简单吧，但是不方便修改，这个只适合最简单基础的。
