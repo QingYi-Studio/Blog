@@ -3,9 +3,8 @@ title: F#执行Shell
 date: 2023-09-10 21:33:59
 author: "Grey-Wind"
 categories:
-- 各语言执行Shell
+- F#
 tags:
-- 编程
 - F-Sharp
 ---
 

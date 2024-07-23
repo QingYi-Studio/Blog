@@ -3,9 +3,9 @@ title: Qml执行Shell
 date: 2023-09-10 19:09:50
 author: "Grey-Wind"
 categories:
-- 各语言执行Shell
+- Qt
+- Qml
 tags:
-- 编程
 - Qml
 ---
 

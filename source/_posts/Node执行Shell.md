@@ -3,10 +3,8 @@ title: Node.js执行Shell
 date: 2023-09-10 18:06:28
 author: "Grey-Wind"
 categories:
-- 各语言执行Shell
 - Node.js
 tags:
-- 编程
 - Node.js
 ---
 

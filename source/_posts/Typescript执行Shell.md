@@ -3,9 +3,8 @@ title: Typescript执行Shell
 date: 2023-09-10 21:50:12
 author: "Grey-Wind"
 categories:
-- 各语言执行Shell
+- Typescript
 tags:
-- 编程
 - Typescript
 ---
 

@@ -4,9 +4,8 @@ date: 2023-09-09 21:28:17
 author: "Grey-Wind"
 excerpt: "使用iostream库的system函数来执行Shell"
 categories:
-- 各语言执行Shell
+- C++
 tags:
-- 编程
 - C++
 ---
 
