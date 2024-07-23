@@ -3,9 +3,8 @@ title: PHP执行Shell
 date: 2023-09-13 21:23:24
 author: "Grey-Wind"
 categories:
-- 各语言执行Shell
+- PHP
 tags:
-- 编程
 - PHP
 ---
 
