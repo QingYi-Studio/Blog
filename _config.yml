@@ -7,7 +7,7 @@ title: 青衣的博客
 subtitle: ''
 description: '一个不定时更新编程知识的博客'
 keywords:
-author: QingYi Stdio
+author: QingYi Studio
 language: zh-CN
 timezone: ''
 
@@ -62,7 +62,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 15
+  per_page: 20
   order_by: -date
 
 # Category & Tag
