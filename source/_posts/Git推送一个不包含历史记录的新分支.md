@@ -63,10 +63,6 @@ git push origin feature/new-feature
 git commit --allow-empty -m "Initial commit"
 ```
 
-Bash
-
-Copy
-
 这个命令会在新分支中创建一个空的提交记录，以确保新分支不是一个空的分支。
 
 #### 步骤 2：将新分支推送到远程仓库
