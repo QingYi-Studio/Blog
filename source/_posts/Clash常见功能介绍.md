@@ -21,4 +21,5 @@ Clash 使用 [YAML](https://yaml.org/) (YAML Ain't Markup Language) 作为配置
 
 在继续之前, 有必要了解 Clash 的工作原理, 其中有两个关键部分:
 
-![https://blog.qingyi-studio.top/img/Clash常见功能介绍/1.png]()
+![Clash工作原理](./1.png)
+
