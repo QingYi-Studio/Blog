@@ -1,6 +1,7 @@
 ---
 title: Clash介绍
 date: 2024-07-04 00:21:28
+category_bar: true
 categories:
 - Clash
 - 配置
@@ -11,7 +12,7 @@ tags:
 - 国际联网
 ---
 
-# Clash常见功能介绍
+# Clash介绍
 
 在本章中，我们将介绍 Clash 的常见功能以及如何使用和配置它们。
 

@@ -615,7 +615,7 @@ post:
 
     # 开启后，只有在文章 Front-matter 里指定 `category_bar: true` 才会展示分类，也可以通过 `category_bar: ["分类A"]` 来指定分类
     # If true, only set `category_bar: true` in Front-matter will enable sidebar of category, also set `category_bar: ["CategoryA"]` to specify categories
-    specific: false
+    specific: true
 
     # 置于板块的左侧或右侧
     # place in the board
@@ -736,7 +736,7 @@ post:
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
     # 可使用: utterances | changyan
-    type: utterances
+    type: twikoo #utterances
 
 
 #---------------------------
@@ -860,7 +860,7 @@ remark42:
 # Based on Tencent CloudBase
 # See: https://twikoo.js.org
 twikoo:
-  envId:
+  envId: https://blog-comment.qingyi-studio.top/
   region: ap-shanghai
   path: window.location.pathname
 
@@ -1050,7 +1050,7 @@ links:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: utterances
+    type: twikoo #utterances
 
 
 #---------------------------
