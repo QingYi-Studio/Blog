@@ -1,6 +1,7 @@
 ---
 title: Clash常见问题
 date: 2024-07-04 00:14:42
+category_bar: true
 categories:
 - Clash
 - 简介

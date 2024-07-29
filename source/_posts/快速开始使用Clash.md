@@ -1,6 +1,7 @@
 ---
 title: 快速开始使用Clash
 date: 2024-07-04 00:00:40
+category_bar: true
 categories:
 - Clash
 - 简介

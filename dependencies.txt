@@ -9,3 +9,4 @@ hexo-renderer-ejs
 hexo-renderer-marked
 hexo-renderer-stylus
 hexo-server
+hexo-all-minifier

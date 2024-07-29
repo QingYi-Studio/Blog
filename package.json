@@ -14,12 +14,12 @@
   },
   "author": "qingyi",
   "license": "",
-  "bugs": {
-  },
+  "bugs": {},
   "hexo": {
-    "version": "7.0.0"
+    "version": "7.2.0"
   },
   "dependencies": {
+    "dependencies": "^0.0.1",
     "hexo": "^7.2.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",

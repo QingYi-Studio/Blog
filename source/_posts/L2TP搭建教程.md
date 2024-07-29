@@ -10,7 +10,7 @@ tags:
 
 # L2TP搭建教程
 
-Finalshell下载地址：https://file.qingyi-studio.top/Blog/L2TP/finalshell_install.exe
+[Finalshell下载地址](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/finalshell_install.exe)
 
 买一个VPS服务器，厂商随意，系统使用CentOS 3.6。
 
@@ -20,34 +20,34 @@ Finalshell下载地址：https://file.qingyi-studio.top/Blog/L2TP/finalshell_ins
 
 打开我们刚下载安装好的Finalshell工具。
 
-![](../img/finalshell-connect.png)
+![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/finalshell-connect.png)
 
 运行命令：
 
 ```shell
-wget https://file.qingyi-studio.top/Blog/L2TP/vpnsetup.sh -O vpn.sh && sudo sh vpn.sh
+wget https://blog-assets.qingyi-cdn.top/L2TP搭建教程/vpnsetup.sh -O vpn.sh && sudo sh vpn.sh
 ```
 
 PS:傻瓜式一键搭建脚本
 
 之后测试搭建是否成功。
 
-![](../img/test-l2tp-1.png)
-![](../img/test-l2tp-2.png)
+![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/test-l2tp-1.png)
+![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/test-l2tp-2.png)
 
 这些没问题的话，就测试连接测试IP是否成功
 
-![](../img/test-l2tp-3.png)
+![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/test-l2tp-3.png)
 
 Windows 10会遇到一些问题，比如连接不上，或者出现809，这里是一些解决的办法。
 
 1. 解决办法： Win + R呼出运行窗口，输入`regedit`
-    ![](../img/l2tp-bugfix-1.png)
+    ![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/l2tp-bugfix-1.png)
 2. 在左侧依次找`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent`
 3. 右键，新建Dword值，名为`AssumeUDPEncapsulationContextOnSendRule`
-    ![](../img/l2tp-bugfix-2.png)
+    ![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/l2tp-bugfix-2.png)
 4. 双击刚刚创建好的值，将值改为2
-    ![](../img/l2tp-bugfix-3.png)
+    ![](https://blog-assets.qingyi-cdn.top/L2TP搭建教程/l2tp-bugfix-3.png)
 5. 重启电脑，即可完成连接
 
 ------
