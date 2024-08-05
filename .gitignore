@@ -127,5 +127,5 @@ dist
 .pnp.*
 
 # Hexo
-#/public
+/public
 db.json
