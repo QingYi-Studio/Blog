@@ -1,5 +1,5 @@
 ---
-title: Clash Outbound 出站
+title: Clash出站
 date: 2024-08-27 21:42:42
 category_bar: true
 categories:
@@ -12,7 +12,7 @@ tags:
 - 国际联网
 ---
 
-# Clash Outbound 出站
+# Clash出站
 
 Clash 中有几种类型的出站。每种类型都有自己的特点和使用场景。在本页中，我们将介绍每种类型的通用特点以及如何使用和配置它们。
 

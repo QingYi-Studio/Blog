@@ -13,3 +13,6 @@ date: 2024-07-27 00:26:10
 - 配置
 	- [Clash介绍](https://blog.qingyi-studio.top/2024/07/04/Clash介绍/)
 	- [Clash快速入手](https://blog.qingyi-studio.top/2024/07/29/Clash快速入手/)
+	- [Clash入站](https://blog.qingyi-studio.top/2024/08/27/Clash-Inbound/)
+	- [Clash出站](https://blog.qingyi-studio.top/2024/08/27/Clash-Outbound/)
+	- [Clash规则](https://blog.qingyi-studio.top/2024/08/27/Clash-Rules/)

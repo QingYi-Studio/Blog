@@ -4,10 +4,10 @@
 
 # Site
 title: 青衣的博客
-subtitle: ''
+subtitle: '青衣工作室博客'
 description: '一个不定时更新编程知识的博客'
 keywords:
-author: QingYi Studio
+author: 'QingYi Studio'
 language: zh-CN
 timezone: ''
 
@@ -27,11 +27,11 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
+i18n_dir: lang
 skip_render: demo/*.html
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -51,7 +51,7 @@ highlight:
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -85,7 +85,7 @@ updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 15
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -103,41 +103,3 @@ theme: fluid  # 指定主题
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-
-### hexo-all-minifier
-all_minifier: true
-
-# html压缩
-html_minifier:
-  enable: true
-  ignore_error: false
-  exclude:
-
-# css压缩
-css_minifier:
-  enable: true
-  exclude:
-    - '*.min.css'
-    
-# js压缩
-js_minifier:
-  enable: true
-  mangle: true
-  compress:
-  exclude:
-    - '*.min.js'
-js_concator:
-  enable: false
-  bundle_path: '/js/bundle.js'
-  front: false
-  silent: false
-
-# 图片优化
-image_minifier:
-  enable: true
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false
-

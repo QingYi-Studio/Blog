@@ -75,7 +75,7 @@ code:
 
       # 设为 true 高亮将本地静态生成（但只支持部分 prismjs 插件），设为 false 高亮将在浏览器通过 js 生成
       # If true, it will be generated locally (but some prismjs plugins are not supported). If false, it will be generated via JS in the browser
-      preprocess: true
+      preprocess: false
 
 # 一些好玩的功能
 # Some fun features
@@ -309,7 +309,7 @@ lazyload:
 
 # 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
-iconfont: //at.alicdn.com/t/font_1736178_lbnruvf0jn.css
+iconfont: //blog-assets.qingyi-studio.top/icons.css
 
 
 #---------------------------
@@ -342,11 +342,12 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
+    # - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "Clash教程", link: "/Clash/", icon: "" }
+    # - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    # - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files

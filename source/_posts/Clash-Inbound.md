@@ -1,5 +1,5 @@
 ---
-title: Clash Inbound 入站
+title: Clash入站
 date: 2024-08-27 21:42:26
 category_bar: true
 categories:
@@ -12,7 +12,7 @@ tags:
 - 国际联网
 ---
 
-# Clash Inbound 入站
+# Clash入站
 
 Clash 支持多种入站协议, 包括:
 
