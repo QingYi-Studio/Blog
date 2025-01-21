@@ -3,14 +3,7 @@ title: Clash快速入手
 date: 2024-07-29 17:20:26
 description: 建议您在继续阅读本节之前，先阅读介绍。在您对Clash的工作原理有了简单的了解后，您可以开始编写您自己的配置。
 category_bar: true
-categories:
-- Clash
-- 配置
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+hide: true
 ---
 
 # Clash快速入手

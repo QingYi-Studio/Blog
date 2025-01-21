@@ -2,14 +2,7 @@
 title: Clash Dns
 date: 2025-01-21 18:15:32
 category_bar: true
-categories:
-- Clash
-- 配置
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+hide: true
 ---
 
 # Clash Dns

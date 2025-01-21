@@ -1,15 +1,9 @@
 ---
 title: Clash参考配置
 date: 2025-01-21 18:19:07
+description: Clash的参考配置模板。
 category_bar: true
-categories:
-- Clash
-- 配置
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+hide: true
 ---
 
 # 参考配置

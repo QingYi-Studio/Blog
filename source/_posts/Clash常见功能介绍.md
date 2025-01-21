@@ -1,14 +1,8 @@
 ---
 title: Clash常见功能介绍
 date: 2024-07-04 00:21:28
-categories:
-- Clash
-- 配置
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+category_bar: true
+hide: true
 ---
 
 # Clash常见功能介绍
