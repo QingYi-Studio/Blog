@@ -6,7 +6,7 @@
 title: 青衣的博客
 subtitle: '青衣工作室博客'
 description: '一个不定时更新编程知识的博客'
-keywords:
+keywords: '博客'
 author: 'QingYi Studio'
 language: zh-CN
 timezone: ''
@@ -31,7 +31,7 @@ i18n_dir: lang
 skip_render: demo/*.html
 
 # Writing
-new_post_name: title.md # File name of new posts
+#new_post_name: title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
