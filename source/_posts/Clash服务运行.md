@@ -1,15 +1,7 @@
 ---
 title: Clash服务运行
 date: 2024-07-04 00:04:04
-category_bar: true
-categories:
-- Clash
-- 简介
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+hide: true
 ---
 
 # Clash 服务运行

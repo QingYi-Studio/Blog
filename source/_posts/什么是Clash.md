@@ -1,15 +1,7 @@
 ---
 title: 什么是Clash?
 date: 2024-07-03 23:51:14
-category_bar: true
-categories:
-- Clash
-- 简介
-tags:
-- Clash
-- VPN
-- 翻墙
-- 国际联网
+hide: true
 ---
 
 # 什么是Clash?
