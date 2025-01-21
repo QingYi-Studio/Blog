@@ -2,7 +2,6 @@
 title: Clash参考配置
 date: 2025-01-21 18:19:07
 description: Clash的参考配置模板。
-category_bar: true
 hide: true
 ---
 
