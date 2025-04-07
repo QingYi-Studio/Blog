@@ -1,7 +1,7 @@
 ---
 title: Clash功能-RuleProviders规则集
 date: 2025-01-22 00:37:39
-hide: true
+category_bar: true
 ---
 
 # Rule Providers 规则集

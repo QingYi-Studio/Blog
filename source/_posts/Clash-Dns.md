@@ -1,7 +1,7 @@
 ---
 title: Clash Dns
 date: 2025-01-21 18:15:32
-hide: true
+category_bar: true
 ---
 
 # Clash Dns

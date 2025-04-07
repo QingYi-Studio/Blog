@@ -1,7 +1,7 @@
 ---
 title: Clash常见功能介绍
 date: 2024-07-04 00:21:28
-hide: true
+category_bar: true
 ---
 
 # Clash常见功能介绍
@@ -14,4 +14,4 @@ Clash 使用 [YAML](https://yaml.org/) (YAML Ain't Markup Language) 作为配置
 
 在继续之前, 有必要了解 Clash 的工作原理, 其中有两个关键部分:
 
-![https://blog.qingyi-studio.top/img/Clash常见功能介绍/1.png]()
+![Clash工作原理](https://blog-assets.qingyi-studio.top/clash/%E5%B8%B8%E8%A7%81%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D/1.png)

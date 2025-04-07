@@ -1,7 +1,7 @@
 ---
 title: Clash常见问题
 date: 2024-07-04 00:14:42
-hide: true
+category_bar: true
 ---
 
 # Clash常见问题

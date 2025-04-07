@@ -1,7 +1,7 @@
 ---
 title: Clash Premium版本简介
 date: 2025-01-22 00:32:10
-hide: true
+category_bar: true
 ---
 
 # 简介

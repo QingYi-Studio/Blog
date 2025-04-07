@@ -1,7 +1,7 @@
 ---
 title: Clash介绍
 date: 2024-07-04 00:21:28
-hide: true
+category_bar: true
 ---
 
 # Clash介绍

@@ -1,7 +1,7 @@
 ---
 title: Clash服务运行
 date: 2024-07-04 00:04:04
-hide: true
+category_bar: true
 ---
 
 # Clash 服务运行

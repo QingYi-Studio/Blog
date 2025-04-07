@@ -1,7 +1,7 @@
 ---
 title: Clash功能-Script脚本
 date: 2025-01-22 00:38:00
-hide: true
+category_bar: true
 ---
 
 # Script 脚本

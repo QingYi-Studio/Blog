@@ -1,7 +1,7 @@
 ---
 title: Clash入站
 date: 2024-08-27 21:42:26
-hide: true
+category_bar: true
 ---
 
 # Clash入站

@@ -1,7 +1,7 @@
 ---
 title: Clash高级用法-在Golang程序中集成Clash
 date: 2025-01-22 00:40:02
-hide: true
+category_bar: true
 ---
 
 # 在 Golang 程序中集成 Clash

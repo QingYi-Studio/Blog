@@ -1,7 +1,7 @@
 ---
 title: 什么是Clash?
 date: 2024-07-03 23:51:14
-hide: true
+category_bar: true
 ---
 
 # 什么是Clash?

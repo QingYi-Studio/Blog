@@ -1,7 +1,7 @@
 ---
 title: Clash功能-用户空间Wireguard
 date: 2025-01-22 00:38:28
-hide: true
+category_bar: true
 ---
 
 # 用户空间 Wireguard

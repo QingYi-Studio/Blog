@@ -2,7 +2,7 @@
 title: Clash快速入手
 date: 2024-07-29 17:20:26
 description: 建议您在继续阅读本节之前，先阅读介绍。在您对Clash的工作原理有了简单的了解后，您可以开始编写您自己的配置。
-hide: true
+category_bar: true
 ---
 
 # Clash快速入手

@@ -1,7 +1,7 @@
 ---
 title: Clash规则
 date: 2024-08-27 21:52:16
-hide: true
+category_bar: true
 ---
 
 # Clash规则

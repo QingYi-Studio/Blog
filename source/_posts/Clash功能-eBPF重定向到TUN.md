@@ -1,7 +1,7 @@
 ---
 title: Clash功能-eBPF重定向到TUN
 date: 2025-01-22 00:37:15
-hide: true
+category_bar: true
 ---
 
 # eBPF 重定向到 TUN

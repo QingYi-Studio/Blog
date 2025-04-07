@@ -1,7 +1,7 @@
 ---
 title: Clash功能-TUN设备
 date: 2025-01-22 00:36:39
-hide: true
+category_bar: true
 ---
 
 # TUN 设备
