@@ -2,6 +2,11 @@
 title: Clash规则
 date: 2024-08-27 21:52:16
 category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Clash规则

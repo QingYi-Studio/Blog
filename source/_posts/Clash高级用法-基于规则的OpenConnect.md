@@ -2,6 +2,11 @@
 title: Clash高级用法-基于规则的OpenConnect
 date: 2025-01-22 00:39:43
 category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # 基于规则的 OpenConnect

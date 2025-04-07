@@ -2,6 +2,11 @@
 title: Clash功能-RuleProviders规则集
 date: 2025-01-22 00:37:39
 category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Rule Providers 规则集

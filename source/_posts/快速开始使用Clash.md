@@ -2,6 +2,11 @@
 title: 快速开始使用Clash
 date: 2024-07-04 00:00:40
 category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # 快速开始使用Clash

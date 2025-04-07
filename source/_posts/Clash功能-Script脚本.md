@@ -2,6 +2,11 @@
 title: Clash功能-Script脚本
 date: 2025-01-22 00:38:00
 category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Script 脚本
