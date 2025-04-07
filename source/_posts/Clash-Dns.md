@@ -1,7 +1,12 @@
 ---
 title: Clash Dns
 date: 2025-01-21 18:15:32
-hide: true
+category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Clash Dns

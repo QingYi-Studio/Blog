@@ -1,7 +1,12 @@
 ---
 title: Clash Premium版本简介
 date: 2025-01-22 00:32:10
-hide: true
+category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # 简介

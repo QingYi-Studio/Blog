@@ -1,0 +1,11 @@
+npm install dependencies
+npm install hexo
+npm install hexo-generator-archive
+npm install hexo-generator-category
+npm install hexo-generator-index
+npm install hexo-generator-tag
+npm install hexo-renderer-ejs
+npm install hexo-renderer-marked
+npm install hexo-renderer-stylus
+npm install hexo-server
+npm install hexo-theme-fluid

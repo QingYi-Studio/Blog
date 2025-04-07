@@ -1,7 +1,12 @@
 ---
 title: Clash功能-ScriptShortcuts脚本捷径
 date: 2025-01-22 00:38:15
-hide: true
+category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Script Shortcuts 脚本捷径

@@ -1,7 +1,12 @@
 ---
 title: Clash入站
 date: 2024-08-27 21:42:26
-hide: true
+category_bar: true
+tags:
+- Clash
+- VPN
+- 翻墙
+- 国际联网
 ---
 
 # Clash入站
