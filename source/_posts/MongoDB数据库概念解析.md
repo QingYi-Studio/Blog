@@ -1,5 +1,5 @@
 ---
-title: MongoDB数据库概念解析
+title: MongoDB 数据库概念解析
 date: 2025-04-08 21:52:48
 tags:
 - 数据库
@@ -12,7 +12,7 @@ categories:
 
 ---
 
-# **MongoDB 数据库详细概念解析**
+# **MongoDB 数据库概念解析**
 
 ## **1. 数据模型与核心概念**
 
