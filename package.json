@@ -2,7 +2,7 @@
   "name": "qingyi-blog",
   "version": "1.0.0",
   "scripts": {
-    "build": "hexo clean && hexo generate",
+    "build": "hexo clean && hexo generate && hexo server",
     "clean": "hexo clean",
     "deploy": "hexo clean && hexo deploy",
     "server": "hexo clean && hexo server",
