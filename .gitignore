@@ -129,3 +129,4 @@ dist
 # Hexo
 /public
 db.json
+/.obsidian
