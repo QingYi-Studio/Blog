@@ -4,9 +4,7 @@
   "scripts": {
     "build": "hexo clean && hexo generate && hexo server",
     "clean": "hexo clean",
-    "deploy": "hexo clean && hexo deploy",
-    "server": "hexo clean && hexo server",
-    "fr": "hexo clean && hexo generate && hexo server"
+    "deploy": "hexo clean && hexo deploy"
   },
   "repository": {
     "type": "git",
