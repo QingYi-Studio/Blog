@@ -12,7 +12,7 @@ if "%name%"=="" (
 )
 
 :: 使用 Hexo 创建新文章
-echo 正在创建文章 "%name%"...
+:: echo 正在创建文章 "%name%"...
 hexo new "%name%"
 
 :: 检查是否成功
