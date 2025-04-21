@@ -2,12 +2,12 @@
 title: MongoDB 连接
 date: 2025-04-21 22:10:01
 tags:
-- 数据库
-- MongoDB
+  - 数据库
+  - MongoDB
 categories:
-- 数据库
-- MongoDB
-- 基础概念
+  - 数据库
+  - MongoDB
+  - 基础用法
 ---
 # MongoDB 连接
 

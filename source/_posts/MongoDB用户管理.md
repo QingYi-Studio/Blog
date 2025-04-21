@@ -2,12 +2,12 @@
 title: MongoDB 用户管理
 date: 2025-04-21 21:59:10
 tags:
-- 数据库
-- MongoDB
+  - 数据库
+  - MongoDB
 categories:
-- 数据库
-- MongoDB
-- 基础概念
+  - 数据库
+  - MongoDB
+  - 基础用法
 ---
 # MongoDB 用户管理
 
