@@ -1,0 +1,901 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/qingyi2.0@1024-p7.svg">
+  <link rel="icon" href="/img/qingyi2.0@1024-p7.svg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="QingYi Studio">
+  <meta name="keywords" content="博客">
+  
+    <meta name="description" content="MongoDB 连接启动 MongoDB 服务在前面的教程中，我们已经讨论了如何启动 MongoDB 服务，你只需要在 MongoDB 安装目录的 bin 目录下执行 mongodb 即可。 执行启动操作后，mongodb 在输出一些必要信息后不会输出任何信息，之后就等待连接的建立，当连接被建立后，就会开始打印日志信息。 你可以使用 MongoDB shell 来连接 MongoDB 服务器。你也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB 连接">
+<meta property="og:url" content="https://blog.qingyi-studio.top/2025/04/21/MongoDB%E8%BF%9E%E6%8E%A5/">
+<meta property="og:site_name" content="青衣的博客">
+<meta property="og:description" content="MongoDB 连接启动 MongoDB 服务在前面的教程中，我们已经讨论了如何启动 MongoDB 服务，你只需要在 MongoDB 安装目录的 bin 目录下执行 mongodb 即可。 执行启动操作后，mongodb 在输出一些必要信息后不会输出任何信息，之后就等待连接的建立，当连接被建立后，就会开始打印日志信息。 你可以使用 MongoDB shell 来连接 MongoDB 服务器。你也">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-21T14:10:01.000Z">
+<meta property="article:modified_time" content="2025-05-07T09:30:47.891Z">
+<meta property="article:author" content="QingYi Studio">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="MongoDB">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>MongoDB 连接 - 青衣的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//blog-assets.qingyi-studio.top/icons.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.qingyi-studio.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"01669a7d77c10e9a53900226175fe9d1","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":false};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?01669a7d77c10e9a53900226175fe9d1";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>青衣的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Tutorial/" target="_self">
+                
+                <span>教程</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="MongoDB 连接"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        QingYi Studio
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-04-21 22:10" pubdate>
+          2025年4月21日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">MongoDB 连接</h1>
+            
+              <p id="updated-time" class="note note-primary" style="display: none">
+                
+                  
+                    本文最后更新于 2025-05-07T17:30:47+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="MongoDB-连接"><a href="#MongoDB-连接" class="headerlink" title="MongoDB 连接"></a>MongoDB 连接</h1><h2 id="启动-MongoDB-服务"><a href="#启动-MongoDB-服务" class="headerlink" title="启动 MongoDB 服务"></a>启动 MongoDB 服务</h2><p>在前面的教程中，我们已经讨论了<a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-window-install.html">如何启动 MongoDB 服务</a>，你只需要在 MongoDB 安装目录的 bin 目录下执行 <strong>mongodb</strong> 即可。</p>
+<p>执行启动操作后，mongodb 在输出一些必要信息后不会输出任何信息，之后就等待连接的建立，当连接被建立后，就会开始打印日志信息。</p>
+<p>你可以使用 <a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-shell.html">MongoDB shell</a> 来连接 MongoDB 服务器。你也可以使用 PHP 来连接 MongoDB。本教程我们会使用 MongoDB shell 来连接 Mongodb 服务，之后的章节我们将会介绍如何通过 PHP、Python 以及 Node.js 来连接 MongoDB 服务。</p>
+<p>标准 URI 连接语法：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><code>mongodb://</code>：协议头，表示使用 MongoDB。</li>
+<li><code>[username:password@]</code>：（可选）认证信息，包括用户名和密码。</li>
+<li><code>host1[:port1][,...hostN[:portN]]</code>：服务器地址和端口，可以是一个或多个 MongoDB 服务器的地址和端口。</li>
+<li><code>/[defaultauthdb]</code>：（可选）默认认证数据库。</li>
+<li><code>[?options]</code>：（可选）连接选项。</li>
+</ul>
+<p>标准的连接格式包含了多个选项(options)，如下所示：</p>
+<ul>
+<li><code>authSource</code>：指定认证数据库。</li>
+<li><code>replicaSet</code>：指定副本集的名称。</li>
+<li><code>ssl</code>：启用 SSL 连接（true 或 false）。</li>
+<li><code>readPreference</code>：指定读偏好，如 <code>primary</code>, <code>primaryPreferred</code>, <code>secondary</code>, <code>secondaryPreferred</code>, <code>nearest</code>。</li>
+<li><code>connectTimeoutMS</code>：指定连接超时时间（毫秒）。</li>
+<li><code>socketTimeoutMS</code>：指定套接字超时时间（毫秒）。</li>
+</ul>
+<p>连接到本地 MongoDB 实例（默认端口 27017）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost<br></code></pre></td></tr></table></figure>
+
+<p>连接到本地 MongoDB 实例，指定数据库：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost/mydatabase<br></code></pre></td></tr></table></figure>
+
+<p>使用用户名和密码连接到本地 MongoDB 实例：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://username:password@localhost/mydatabase<br></code></pre></td></tr></table></figure>
+
+<p>连接到远程 MongoDB 实例：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://remotehost:27017<br></code></pre></td></tr></table></figure>
+
+<p>连接到副本集（Replica Set）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://host1:27017,host2:27017,host3:27017/mydatabase?replicaSet=myReplicaSet<br></code></pre></td></tr></table></figure>
+
+<p>使用 SSL 连接到 MongoDB：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://username:password@localhost:27017/mydatabase?ssl=true<br></code></pre></td></tr></table></figure>
+
+<p>使用多个选项连接：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://username:password@localhost:27017/mydatabase?authSource=admin&amp;ssl=true<br></code></pre></td></tr></table></figure>
+
+<h2 id="各语言使用实例"><a href="#各语言使用实例" class="headerlink" title="各语言使用实例"></a>各语言使用实例</h2><h3 id="Python-PyMongo"><a href="#Python-PyMongo" class="headerlink" title="Python (PyMongo)"></a>Python (PyMongo)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pymongo <span class="hljs-keyword">import</span> MongoClient<br>client = MongoClient(<span class="hljs-string">&#x27;mongodb://user:password@localhost:27017/mydatabase?authSource=admin&#x27;</span>)<br>db = client[<span class="hljs-string">&#x27;mydatabase&#x27;</span>]<br></code></pre></td></tr></table></figure>
+
+<h3 id="Node-js-Mongoose"><a href="#Node-js-Mongoose" class="headerlink" title="Node.js (Mongoose)"></a>Node.js (Mongoose)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;mongoose&#x27;</span>);<br>mongoose.<span class="hljs-title function_">connect</span>(<span class="hljs-string">&#x27;mongodb://user:password@localhost:27017/mydatabase?authSource=admin&#x27;</span>, &#123;<br>  <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span><br>&#125;);<br><span class="hljs-keyword">const</span> db = mongoose.<span class="hljs-property">connection</span>;<br>db.<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;error&#x27;</span>, <span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">console</span>, <span class="hljs-string">&#x27;connection error:&#x27;</span>));<br>db.<span class="hljs-title function_">once</span>(<span class="hljs-string">&#x27;open&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Connected to MongoDB&#x27;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h3 id="PHP-Mongoose"><a href="#PHP-Mongoose" class="headerlink" title="PHP (Mongoose)"></a>PHP (Mongoose)</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">require</span> <span class="hljs-string">&#x27;vendor/autoload.php&#x27;</span>; <span class="hljs-comment">// 引入 Composer 自动加载文件</span><br><br><span class="hljs-variable">$client</span> = <span class="hljs-keyword">new</span> MongoDB\<span class="hljs-title function_ invoke__">Client</span>(<span class="hljs-string">&quot;mongodb://localhost:27017&quot;</span>); <span class="hljs-comment">// 连接到本地 MongoDB 实例</span><br><span class="hljs-variable">$database</span> = <span class="hljs-variable">$client</span>-&gt;<span class="hljs-title function_ invoke__">selectDatabase</span>(<span class="hljs-string">&#x27;mydatabase&#x27;</span>); <span class="hljs-comment">// 选择数据库</span><br><span class="hljs-variable">$collection</span> = <span class="hljs-variable">$database</span>-&gt;<span class="hljs-title function_ invoke__">selectCollection</span>(<span class="hljs-string">&#x27;mycollection&#x27;</span>); <span class="hljs-comment">// 选择集合</span><br><br><span class="hljs-comment">// 插入文档</span><br><span class="hljs-variable">$result</span> = <span class="hljs-variable">$collection</span>-&gt;<span class="hljs-title function_ invoke__">insertOne</span>([<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span> =&gt; <span class="hljs-number">30</span>]);<br><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;Inserted with Object ID &#x27;<span class="hljs-subst">&#123;$result-&gt;getInsertedId()&#125;</span>&#x27;&quot;</span>;<br><br><span class="hljs-comment">// 查询文档</span><br><span class="hljs-variable">$document</span> = <span class="hljs-variable">$collection</span>-&gt;<span class="hljs-title function_ invoke__">findOne</span>([<span class="hljs-string">&#x27;name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Alice&#x27;</span>]);<br><span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;Found document: &quot;</span> . <span class="hljs-title function_ invoke__">json_encode</span>(<span class="hljs-variable">$document</span>);<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.mongodb.client.MongoClient;<br><span class="hljs-keyword">import</span> com.mongodb.client.MongoClients;<br><span class="hljs-keyword">import</span> com.mongodb.client.MongoDatabase;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MongoDBConnection</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">uri</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mongodb://user:password@localhost:27017/mydatabase?authSource=admin&quot;</span>;<br>        <span class="hljs-keyword">try</span> (<span class="hljs-type">MongoClient</span> <span class="hljs-variable">mongoClient</span> <span class="hljs-operator">=</span> MongoClients.create(uri)) &#123;<br>            <span class="hljs-type">MongoDatabase</span> <span class="hljs-variable">database</span> <span class="hljs-operator">=</span> mongoClient.getDatabase(<span class="hljs-string">&quot;mydatabase&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;Connected to MongoDB&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用默认端口来连接 MongoDB 的服务。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost<br></code></pre></td></tr></table></figure>
+
+<p>通过 shell 连接 MongoDB 服务：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">./mongosh<br>CurrentMongoshLog ID:    66792d6b87657ebec9ed70f1<br>Connecting to:        mongodb://127.0.0.1:27017/?directConnection=true&amp;serverSelectionTimeoutMS=2000&amp;appName=mongosh+2.2.9<br>UsingMongoDB:        7.0.11<br>UsingMongosh:        2.2.9<br></code></pre></td></tr></table></figure>
+
+<p>这时候你返回查看运行 <strong>.&#x2F;mongod</strong> 命令的窗口，可以看到是从哪里连接到MongoDB的服务器，您可以看到如下信息：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">……省略信息……<br>2015-09-25T17:22:27.336+0800 I CONTROL  [initandlisten] allocator: tcmalloc<br>2015-09-25T17:22:27.336+0800 I CONTROL  [initandlisten] options:&#123; storage:&#123; dbPath:&quot;/data/db&quot;&#125;&#125;<br>2015-09-25T17:22:27.350+0800 I NETWORK  [initandlisten] waiting for connections on port 27017<br>2015-09-25T17:22:36.012+0800 I NETWORK  [initandlisten] connection accepted from127.0.0.1:37310#1 (1 connection now open)  # 该行表明一个来自本机的连接<br><br>……省略信息……<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="MongoDB-连接命令格式"><a href="#MongoDB-连接命令格式" class="headerlink" title="MongoDB 连接命令格式"></a>MongoDB 连接命令格式</h2><p>使用用户名和密码连接到 MongoDB 服务器，你必须使用 ‘ <strong>username:password@hostname&#x2F;dbname</strong> ‘ 格式，’username’为用户名，’password’ 为密码。</p>
+<p>使用用户名和密码连接登录到默认数据库：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">$ ./mongosh<br>MongoDB shell version:4.0.9<br>connecting to: test<br></code></pre></td></tr></table></figure>
+
+<p>使用用户 admin 使用密码 123456 连接到本地的 MongoDB 服务上。输出结果如下所示：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">&gt; mongodb://admin:123456@localhost/<br>...<br></code></pre></td></tr></table></figure>
+
+<p>使用用户名和密码连接登录到指定数据库，格式如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://admin:123456@localhost/test<br></code></pre></td></tr></table></figure>
+
+<h3 id="更多连接实例"><a href="#更多连接实例" class="headerlink" title="更多连接实例"></a>更多连接实例</h3><p>连接本地数据库服务器，端口是默认的。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost<br></code></pre></td></tr></table></figure>
+
+<p>使用用户名fred，密码foobar登录localhost的admin数据库。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://fred:foobar@localhost<br></code></pre></td></tr></table></figure>
+
+<p>使用用户名fred，密码foobar登录localhost的baz数据库。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://fred:foobar@localhost/baz<br></code></pre></td></tr></table></figure>
+
+<p>连接 replica pair, 服务器1为example1.com服务器2为example2。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://example1.com:27017,example2.com:27017<br></code></pre></td></tr></table></figure>
+
+<p>连接 replica set 三台服务器 (端口 27017, 27018, 和27019):</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost,localhost:27018,localhost:27019<br></code></pre></td></tr></table></figure>
+
+<p>连接 replica set 三台服务器, 写入操作应用在主服务器 并且分布查询到从服务器。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://host1,host2,host3/?slaveOk=true<br></code></pre></td></tr></table></figure>
+
+<p>直接连接第一个服务器，无论是replica set一部分或者主服务器或者从服务器。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://host1,host2,host3/?connect=direct;slaveOk=true<br></code></pre></td></tr></table></figure>
+
+<p>当你的连接服务器有优先级，还需要列出所有服务器，你可以使用上述连接方式。</p>
+<p>安全模式连接到localhost:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://localhost/?safe=true<br></code></pre></td></tr></table></figure>
+
+<p>以安全模式连接到replica set，并且等待至少两个复制服务器成功写入，超时时间设置为2秒。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/" class="category-chain-item">基础用法</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="print-no-link">#数据库</a>
+      
+        <a href="/tags/MongoDB/" class="print-no-link">#MongoDB</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>MongoDB 连接</div>
+      <div>https://blog.qingyi-studio.top/2025/04/21/MongoDB连接/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>QingYi Studio</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年4月21日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年5月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-cc-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/04/21/MongoDB%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="MongoDB 用户管理">
+                        <span class="hidden-mobile">MongoDB 用户管理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://blog-comment.qingyi-studio.top/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <!--<a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo</span> </a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <span>Fluid</span> </a>--> <a href="https://github.com/Grey-Wind" target="_blank" rel="nofollow noopener"> <span>Grey-Wind</span> </a> <i class="iconfont icon-love"></i> <a href="https://qingyi-studio.top/" target="_blank" rel="nofollow noopener"> <span>QingYi Studio</span> </a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":true,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
