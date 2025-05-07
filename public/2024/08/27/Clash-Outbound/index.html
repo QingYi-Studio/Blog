@@ -1,0 +1,911 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/qingyi2.0@1024-p7.svg">
+  <link rel="icon" href="/img/qingyi2.0@1024-p7.svg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="QingYi Studio">
+  <meta name="keywords" content="博客">
+  
+    <meta name="description" content="Clash出站Clash 中有几种类型的出站。每种类型都有自己的特点和使用场景。在本页中，我们将介绍每种类型的通用特点以及如何使用和配置它们。 Proxies 代理节点Proxies 代理节点是您可以配置的一些出站目标. 就像代理服务器一样, 您在这里为数据包定义目的地. ShadowsocksClash 支持以下 Shadowsocks 的加密方法:    系列 加密方法    AEAD aes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clash出站">
+<meta property="og:url" content="https://blog.qingyi-studio.top/2024/08/27/Clash-Outbound/">
+<meta property="og:site_name" content="青衣的博客">
+<meta property="og:description" content="Clash出站Clash 中有几种类型的出站。每种类型都有自己的特点和使用场景。在本页中，我们将介绍每种类型的通用特点以及如何使用和配置它们。 Proxies 代理节点Proxies 代理节点是您可以配置的一些出站目标. 就像代理服务器一样, 您在这里为数据包定义目的地. ShadowsocksClash 支持以下 Shadowsocks 的加密方法:    系列 加密方法    AEAD aes">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-27T13:42:42.000Z">
+<meta property="article:modified_time" content="2025-05-07T09:30:47.875Z">
+<meta property="article:author" content="QingYi Studio">
+<meta property="article:tag" content="Clash">
+<meta property="article:tag" content="VPN">
+<meta property="article:tag" content="翻墙">
+<meta property="article:tag" content="国际联网">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Clash出站 - 青衣的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//blog-assets.qingyi-studio.top/icons.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.qingyi-studio.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"01669a7d77c10e9a53900226175fe9d1","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":false};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?01669a7d77c10e9a53900226175fe9d1";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>青衣的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Tutorial/" target="_self">
+                
+                <span>教程</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Clash出站"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        QingYi Studio
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-27 21:42" pubdate>
+          2024年8月27日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Clash出站</h1>
+            
+              <p id="updated-time" class="note note-primary" style="display: none">
+                
+                  
+                    本文最后更新于 2025-05-07T17:30:47+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Clash出站"><a href="#Clash出站" class="headerlink" title="Clash出站"></a>Clash出站</h1><p>Clash 中有几种类型的出站。每种类型都有自己的特点和使用场景。在本页中，我们将介绍每种类型的通用特点以及如何使用和配置它们。</p>
+<h2 id="Proxies-代理节点"><a href="#Proxies-代理节点" class="headerlink" title="Proxies 代理节点"></a>Proxies 代理节点</h2><p>Proxies 代理节点是您可以配置的一些出站目标. 就像代理服务器一样, 您在这里为数据包定义目的地.</p>
+<h3 id="Shadowsocks"><a href="#Shadowsocks" class="headerlink" title="Shadowsocks"></a>Shadowsocks</h3><p>Clash 支持以下 Shadowsocks 的加密方法:</p>
+<table>
+<thead>
+<tr>
+<th>系列</th>
+<th>加密方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AEAD</td>
+<td>aes-128-gcm, aes-192-gcm, aes-256-gcm, chacha20-ietf-poly1305, xchacha20-ietf-poly1305</td>
+</tr>
+<tr>
+<td>流式</td>
+<td>aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20</td>
+</tr>
+<tr>
+<td>块式</td>
+<td>aes-128-ctr, aes-192-ctr, aes-256-ctr</td>
+</tr>
+</tbody></table>
+<p>此外, Clash 还支持流行的 Shadowsocks 插件 <code>obfs</code> 和 <code>v2ray-plugin</code>.</p>
+<figure class="highlight yaml"><figcaption><span>[basic]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ss1&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">ss</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf-poly1305</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br>  <span class="hljs-comment"># udp: true</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[obfs]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ss2&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">ss</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf-poly1305</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br>  <span class="hljs-attr">plugin:</span> <span class="hljs-string">obfs</span><br>  <span class="hljs-attr">plugin-opts:</span><br>    <span class="hljs-attr">mode:</span> <span class="hljs-string">tls</span> <span class="hljs-comment"># or http</span><br>    <span class="hljs-comment"># host: bing.com</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[ws (websocket)]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ss3&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">ss</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf-poly1305</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br>  <span class="hljs-attr">plugin:</span> <span class="hljs-string">v2ray-plugin</span><br>  <span class="hljs-attr">plugin-opts:</span><br>    <span class="hljs-attr">mode:</span> <span class="hljs-string">websocket</span> <span class="hljs-comment"># 暂不支持 QUIC</span><br>    <span class="hljs-comment"># tls: true # wss</span><br>    <span class="hljs-comment"># skip-cert-verify: true</span><br>    <span class="hljs-comment"># host: bing.com</span><br>    <span class="hljs-comment"># path: &quot;/&quot;</span><br>    <span class="hljs-comment"># mux: true</span><br>    <span class="hljs-comment"># headers:</span><br>    <span class="hljs-comment">#   custom: value</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="ShadowsocksR"><a href="#ShadowsocksR" class="headerlink" title="ShadowsocksR"></a>ShadowsocksR</h3><p>Clash 也支持声名狼藉的反审查协议 ShadowsocksR.</p>
+<p>支持以下 ShadowsocksR 的加密方法:</p>
+<table>
+<thead>
+<tr>
+<th>系列</th>
+<th>加密方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>流式</td>
+<td>aes-128-cfb, aes-192-cfb, aes-256-cfb, rc4-md5, chacha20-ietf, xchacha20</td>
+</tr>
+</tbody></table>
+<p>支持的混淆方法:</p>
+<ul>
+<li>plain</li>
+<li>http_simple</li>
+<li>http_post</li>
+<li>random_head</li>
+<li>tls1.2_ticket_auth</li>
+<li>tls1.2_ticket_fastauth</li>
+</ul>
+<p>支持的协议:</p>
+<ul>
+<li>origin</li>
+<li>auth_sha1_v4</li>
+<li>auth_aes128_md5</li>
+<li>auth_aes128_sha1</li>
+<li>auth_chain_a</li>
+<li>auth_chain_b</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ssr&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">ssr</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br>  <span class="hljs-attr">obfs:</span> <span class="hljs-string">tls1.2_ticket_auth</span><br>  <span class="hljs-attr">protocol:</span> <span class="hljs-string">auth_sha1_v4</span><br>  <span class="hljs-comment"># obfs-param: domain.tld</span><br>  <span class="hljs-comment"># protocol-param: &quot;#&quot;</span><br>  <span class="hljs-comment"># udp: true</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Vmess"><a href="#Vmess" class="headerlink" title="Vmess"></a>Vmess</h3><p>Clash 支持以下 Vmess 的加密方法:</p>
+<ul>
+<li>auto</li>
+<li>aes-128-gcm</li>
+<li>chacha20-poly1305</li>
+<li>none</li>
+</ul>
+<figure class="highlight yaml"><figcaption><span>[basic]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;vmess&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">vmess</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">uuid:</span> <span class="hljs-string">uuid</span><br>  <span class="hljs-attr">alterId:</span> <span class="hljs-number">32</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">auto</span><br>  <span class="hljs-comment"># udp: true</span><br>  <span class="hljs-comment"># tls: true</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br>  <span class="hljs-comment"># servername: example.com # 优先于 wss 主机</span><br>  <span class="hljs-comment"># network: ws</span><br>  <span class="hljs-comment"># ws-opts:</span><br>  <span class="hljs-comment">#   path: /path</span><br>  <span class="hljs-comment">#   headers:</span><br>  <span class="hljs-comment">#     Host: v2ray.com</span><br>  <span class="hljs-comment">#   max-early-data: 2048</span><br>  <span class="hljs-comment">#   early-data-header-name: Sec-WebSocket-Protocol</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[HTTP]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;vmess-http&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">vmess</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">uuid:</span> <span class="hljs-string">uuid</span><br>  <span class="hljs-attr">alterId:</span> <span class="hljs-number">32</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">auto</span><br>  <span class="hljs-comment"># udp: true</span><br>  <span class="hljs-comment"># network: http</span><br>  <span class="hljs-comment"># http-opts:</span><br>  <span class="hljs-comment">#   # method: &quot;GET&quot;</span><br>  <span class="hljs-comment">#   # path:</span><br>  <span class="hljs-comment">#   #   - &#x27;/&#x27;</span><br>  <span class="hljs-comment">#   #   - &#x27;/video&#x27;</span><br>  <span class="hljs-comment">#   # headers:</span><br>  <span class="hljs-comment">#   #   Connection:</span><br>  <span class="hljs-comment">#   #     - keep-alive</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[HTTP/2]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;vmess-h2&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">vmess</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">uuid:</span> <span class="hljs-string">uuid</span><br>  <span class="hljs-attr">alterId:</span> <span class="hljs-number">32</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">auto</span><br>  <span class="hljs-attr">network:</span> <span class="hljs-string">h2</span><br>  <span class="hljs-attr">tls:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">h2-opts:</span><br>    <span class="hljs-attr">host:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">http.example.com</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">http-alt.example.com</span><br>    <span class="hljs-attr">path:</span> <span class="hljs-string">/</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[gRPC]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">vmess-grpc</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">vmess</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">uuid:</span> <span class="hljs-string">uuid</span><br>  <span class="hljs-attr">alterId:</span> <span class="hljs-number">32</span><br>  <span class="hljs-attr">cipher:</span> <span class="hljs-string">auto</span><br>  <span class="hljs-attr">network:</span> <span class="hljs-string">grpc</span><br>  <span class="hljs-attr">tls:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">servername:</span> <span class="hljs-string">example.com</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br>  <span class="hljs-attr">grpc-opts:</span><br>    <span class="hljs-attr">grpc-service-name:</span> <span class="hljs-string">&quot;example&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Socks5"><a href="#Socks5" class="headerlink" title="Socks5"></a>Socks5</h3><p>此外, Clash 还支持 Socks5 代理.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;socks&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">socks5</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-comment"># username: username</span><br>  <span class="hljs-comment"># password: password</span><br>  <span class="hljs-comment"># tls: true</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br>  <span class="hljs-comment"># udp: true</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>Clash 也支持 HTTP 代理:</p>
+<figure class="highlight yaml"><figcaption><span>[HTTP]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;http&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">http</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-comment"># username: username</span><br>  <span class="hljs-comment"># password: password</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[HTTPS]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;http&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">http</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-comment"># username: username</span><br>  <span class="hljs-comment"># password: password</span><br>  <span class="hljs-attr">tls:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">skip-cert-verify:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Snell"><a href="#Snell" class="headerlink" title="Snell"></a>Snell</h3><p>作为可选的反审查协议, Clash也集成了对Snell的支持.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 暂不支持 UDP</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;snell&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">snell</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">44046</span><br>  <span class="hljs-attr">psk:</span> <span class="hljs-string">yourpsk</span><br>  <span class="hljs-comment"># version: 2</span><br>  <span class="hljs-comment"># obfs-opts:</span><br>    <span class="hljs-comment"># mode: http # or tls</span><br>    <span class="hljs-comment"># host: bing.com</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Trojan"><a href="#Trojan" class="headerlink" title="Trojan"></a>Trojan</h3><p>Clash 内置了对流行协议 Trojan 的支持:</p>
+<figure class="highlight yaml"><figcaption><span>[basic]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;trojan&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">trojan</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">yourpsk</span><br>  <span class="hljs-comment"># udp: true</span><br>  <span class="hljs-comment"># sni: example.com # aka server name</span><br>  <span class="hljs-comment"># alpn:</span><br>  <span class="hljs-comment">#   - h2</span><br>  <span class="hljs-comment">#   - http/1.1</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[gRPC]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">trojan-grpc</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">trojan</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;example&quot;</span><br>  <span class="hljs-attr">network:</span> <span class="hljs-string">grpc</span><br>  <span class="hljs-attr">sni:</span> <span class="hljs-string">example.com</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br>  <span class="hljs-attr">udp:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">grpc-opts:</span><br>    <span class="hljs-attr">grpc-service-name:</span> <span class="hljs-string">&quot;example&quot;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[ws (websocket)]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">trojan-ws</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">trojan</span><br>  <span class="hljs-comment"># interface-name: eth0</span><br>  <span class="hljs-comment"># routing-mark: 1234</span><br>  <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>  <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;example&quot;</span><br>  <span class="hljs-attr">network:</span> <span class="hljs-string">ws</span><br>  <span class="hljs-attr">sni:</span> <span class="hljs-string">example.com</span><br>  <span class="hljs-comment"># skip-cert-verify: true</span><br>  <span class="hljs-attr">udp:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-comment"># ws-opts:</span><br>    <span class="hljs-comment"># path: /path</span><br>    <span class="hljs-comment"># headers:</span><br>    <span class="hljs-comment">#   Host: example.com</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Proxy-Groups-策略组"><a href="#Proxy-Groups-策略组" class="headerlink" title="Proxy Groups 策略组"></a>Proxy Groups 策略组</h2><p>Proxy Groups 策略组用于根据不同策略分发规则传递过来的请求, 其可以直接被规则引用, 也可以被其他策略组引用, 而最上级策略组被规则引用.</p>
+<h3 id="relay-中继"><a href="#relay-中继" class="headerlink" title="relay 中继"></a>relay 中继</h3><p>请求将依次通过指定的代理服务器进行中继, 目前不支持 UDP. 指定的代理服务器不应包含另一个 relay 中继.</p>
+<h3 id="url-test-延迟测试"><a href="#url-test-延迟测试" class="headerlink" title="url-test 延迟测试"></a>url-test 延迟测试</h3><p>Clash 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的<strong>延迟</strong>. 可以设置最大容忍值、测试间隔和目标 URL.</p>
+<h3 id="fallback-可用性测试"><a href="#fallback-可用性测试" class="headerlink" title="fallback 可用性测试"></a>fallback 可用性测试</h3><p>Clash 会周期性地通过指定的 URL 向列表中的代理服务器发送 HTTP HEAD 请求来测试每个代理服务器的<strong>可用性</strong>. 第一个可用的服务器将被使用.</p>
+<h3 id="load-balance-负载均衡"><a href="#load-balance-负载均衡" class="headerlink" title="load-balance 负载均衡"></a>load-balance 负载均衡</h3><p>相同 eTLD+1 的请求将使用同一个代理服务器.</p>
+<h3 id="select-手动选择"><a href="#select-手动选择" class="headerlink" title="select 手动选择"></a>select 手动选择</h3><p>Clash 启动时默认使用策略组中的第一个代理服务器. 用户可以使用 RESTful API 选择要使用的代理服务器. 在此模式下, 您可以在配置中硬编码服务器或使用 <a href="#proxy-providers-%E4%BB%A3%E7%90%86%E9%9B%86">Proxy Providers 代理集</a> 动态添加服务器.</p>
+<p>无论哪种方式, 有时您也可以使用直接连接来路由数据包. 在这种情况下, 您可以使用 <code>DIRECT</code> 直连出站.</p>
+<p>要使用不同的网络接口, 您需要使用包含 <code>DIRECT</code> 直连出站的策略组, 并设置 <code>interface-name</code> 选项.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;My Wireguard Outbound&quot;</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">select</span><br>  <span class="hljs-attr">interface-name:</span> <span class="hljs-string">wg0</span><br>  <span class="hljs-attr">proxies:</span> [ <span class="hljs-string">&#x27;DIRECT&#x27;</span> ]<br></code></pre></td></tr></table></figure>
+
+<h2 id="Proxy-Providers-代理集"><a href="#Proxy-Providers-代理集" class="headerlink" title="Proxy Providers 代理集"></a>Proxy Providers 代理集</h2><p>代理集使用户可以动态加载代理服务器列表, 而不是在配置文件中硬编码. 目前有两种代理集可以加载服务器列表:</p>
+<ul>
+<li><code>http</code>: Clash 会在启动时从指定的 URL 加载服务器列表. 如果设置了 <code>interval</code> 选项, Clash 会定期从远程拉取服务器列表.</li>
+<li><code>file</code>: Clash 会在启动时从指定的文件位置加载服务器列表.</li>
+</ul>
+<p>健康检查对两种模式都可用, 并且与策略组中的 <code>fallback</code> 完全相同. 服务器列表文件的配置格式在主配置文件中也完全相同:</p>
+<figure class="highlight yaml"><figcaption><span>[config.yaml]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">proxy-providers:</span><br>  <span class="hljs-attr">provider1:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">http</span><br>    <span class="hljs-attr">url:</span> <span class="hljs-string">&quot;url&quot;</span><br>    <span class="hljs-attr">interval:</span> <span class="hljs-number">3600</span><br>    <span class="hljs-attr">path:</span> <span class="hljs-string">./provider1.yaml</span><br>    <span class="hljs-comment"># filter: &#x27;a|b&#x27; # golang regex 正则表达式</span><br>    <span class="hljs-attr">health-check:</span><br>      <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>      <span class="hljs-attr">interval:</span> <span class="hljs-number">600</span><br>      <span class="hljs-comment"># lazy: true</span><br>      <span class="hljs-attr">url:</span> <span class="hljs-string">http://www.gstatic.com/generate_204</span><br>  <span class="hljs-attr">test:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">file</span><br>    <span class="hljs-attr">path:</span> <span class="hljs-string">/test.yaml</span><br>    <span class="hljs-attr">health-check:</span><br>      <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>      <span class="hljs-attr">interval:</span> <span class="hljs-number">36000</span><br>      <span class="hljs-attr">url:</span> <span class="hljs-string">http://www.gstatic.com/generate_204</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><figcaption><span>[test.yaml]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">proxies:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ss1&quot;</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">ss</span><br>    <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>    <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>    <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf-poly1305</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">&quot;ss2&quot;</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">ss</span><br>    <span class="hljs-attr">server:</span> <span class="hljs-string">server</span><br>    <span class="hljs-attr">port:</span> <span class="hljs-number">443</span><br>    <span class="hljs-attr">cipher:</span> <span class="hljs-string">chacha20-ietf-poly1305</span><br>    <span class="hljs-attr">password:</span> <span class="hljs-string">&quot;password&quot;</span><br>    <span class="hljs-attr">plugin:</span> <span class="hljs-string">obfs</span><br>    <span class="hljs-attr">plugin-opts:</span><br>      <span class="hljs-attr">mode:</span> <span class="hljs-string">tls</span><br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Clash/" class="print-no-link">#Clash</a>
+      
+        <a href="/tags/VPN/" class="print-no-link">#VPN</a>
+      
+        <a href="/tags/%E7%BF%BB%E5%A2%99/" class="print-no-link">#翻墙</a>
+      
+        <a href="/tags/%E5%9B%BD%E9%99%85%E8%81%94%E7%BD%91/" class="print-no-link">#国际联网</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Clash出站</div>
+      <div>https://blog.qingyi-studio.top/2024/08/27/Clash-Outbound/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>QingYi Studio</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月27日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年5月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-cc-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-cc-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/08/27/Clash-Rules/" title="Clash规则">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Clash规则</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/27/Clash-Inbound/" title="Clash入站">
+                        <span class="hidden-mobile">Clash入站</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://blog-comment.qingyi-studio.top/","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <!--<a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo</span> </a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <span>Fluid</span> </a>--> <a href="https://github.com/Grey-Wind" target="_blank" rel="nofollow noopener"> <span>Grey-Wind</span> </a> <i class="iconfont icon-love"></i> <a href="https://qingyi-studio.top/" target="_blank" rel="nofollow noopener"> <span>QingYi Studio</span> </a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":true,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

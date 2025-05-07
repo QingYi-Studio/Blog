@@ -1,0 +1,1685 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/qingyi2.0@1024-p7.svg">
+  <link rel="icon" href="/img/qingyi2.0@1024-p7.svg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="QingYi Studio">
+  <meta name="keywords" content="博客">
+  
+    <meta name="description" content="一个不定时更新编程知识的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="青衣的博客">
+<meta property="og:url" content="https://blog.qingyi-studio.top/">
+<meta property="og:site_name" content="青衣的博客">
+<meta property="og:description" content="一个不定时更新编程知识的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="QingYi Studio">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>青衣的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//blog-assets.qingyi-studio.top/icons.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.qingyi-studio.top","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":true,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"01669a7d77c10e9a53900226175fe9d1","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":true},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":false};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?01669a7d77c10e9a53900226175fe9d1";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>青衣的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/Tutorial/" target="_self">
+                
+                <span>教程</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="青衣的博客&lt;br&gt;&lt;br&gt;不定时更新编程知识"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+          <i class="index-pin iconfont icon-top" title="Pin on top"></i>
+        
+        <a href="/2024/07/23/%E5%85%A8%E7%90%83DNS/" target="_blank">
+          全球DNS
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/07/23/%E5%85%A8%E7%90%83DNS/" target="_blank">
+        <div>
+          全球DNS国内腾讯 DNS (DNSPod)IPv4： 12119.29.29.29182.254.116.116(使用情况未知)  IPv6： 12402:4e00::  DoH： 1https://doh.pub/dns-query  DoH(IP)： 12https://1.12.12.12/dns-queryhttps://120.53.53.53/dns-query  DoH (国密 S
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-07-23 16:25" pubdate>
+              2024-07-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DNS/">#DNS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/21/MongoDB%E8%BF%9E%E6%8E%A5/" target="_blank">
+          MongoDB 连接
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/21/MongoDB%E8%BF%9E%E6%8E%A5/" target="_blank">
+        <div>
+          MongoDB 连接启动 MongoDB 服务在前面的教程中，我们已经讨论了如何启动 MongoDB 服务，你只需要在 MongoDB 安装目录的 bin 目录下执行 mongodb 即可。 执行启动操作后，mongodb 在输出一些必要信息后不会输出任何信息，之后就等待连接的建立，当连接被建立后，就会开始打印日志信息。 你可以使用 MongoDB shell 来连接 MongoDB 服务器。你也
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-21 22:10" pubdate>
+              2025-04-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/" class="category-chain-item">基础用法</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/21/MongoDB%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" target="_blank">
+          MongoDB 用户管理
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/21/MongoDB%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" target="_blank">
+        <div>
+          MongoDB 用户管理使用 MongoDB Shell (mongo) 管理用户以下是使用 MongoDB Shell (mongosh) 进行用户管理的详细说明，包括创建用户、分配角色、认证和登录的具体步骤。 1. 连接到 MongoDB 首先，打开你的终端并使用 mongosh 命令连接到 MongoDB 服务器： mongosh –host &lt;hostname&gt; –port &
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-21 21:59" pubdate>
+              2025-04-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/" class="category-chain-item">基础用法</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/20/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_blank">
+          MongoDB 数据类型
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/20/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_blank">
+        <div>
+          MongoDB 数据类型   数据类型 描述    String 字符串。存储数据常用的数据类型。在 MongoDB 中，UTF-8 编码的字符串才是合法的。   Integer 整型数值。用于存储数值。根据你所采用的服务器，可分为 32 位或 64 位。   Boolean 布尔值。用于存储布尔值（真&#x2F;假）。   Double 双精度浮点值。用于存储浮点值。   Min&#x2F;Ma
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-20 00:00" pubdate>
+              2025-04-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/19/WPF%E4%B8%ADGrid%E7%9A%84%E7%94%A8%E6%B3%95/" target="_blank">
+          WPF中Grid的用法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/19/WPF%E4%B8%ADGrid%E7%9A%84%E7%94%A8%E6%B3%95/" target="_blank">
+        <div>
+          WPF中Grid的用法基本概念 行（Row）和列（Column） ：Grid 控件通过定义行和列来组织布局。 单元格 ：每个行和列的交叉点称为一个单元格，控件可以被放置在单元格内。 跨越行和列 ：Grid 允许控件跨越多个行或列。 自动尺寸调整 ：Grid 的行和列可以根据内容自动调整大小，也可以固定大小或按照比例分配空间。  Grid.RowDefinitions 和 Grid.ColumnDe
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-19 23:41" pubdate>
+              2025-04-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C/" class="category-chain-item">C#</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/C/WPF/" class="category-chain-item">WPF</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C-Sharp/">#C-Sharp</a>
+            
+              <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>
+            
+              <a href="/tags/WPF/">#WPF</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/09/MongoDB%E5%85%83%E6%95%B0%E6%8D%AE%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+          MongoDB 元数据概念解析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/09/MongoDB%E5%85%83%E6%95%B0%E6%8D%AE%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+        <div>
+          MongoDB 元数据概念解析元数据（Metadata）是描述数据的数据，MongoDB 通过一系列系统集合和内置机制管理其内部结构和运行状态。以下是 MongoDB 元数据的核心内容解析：  1. MongoDB 元数据的定义与作用 定义：MongoDB 元数据是用于 描述数据库自身结构和状态的数据，包括数据库信息、集合配置、用户权限、分片规则、副本集状态等。   作用：   维护数据库架构（
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-09 22:34" pubdate>
+              2025-04-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/09/MongoDB%E9%9B%86%E5%90%88%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+          MongoDB 集合概念解析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/09/MongoDB%E9%9B%86%E5%90%88%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+        <div>
+          MongoDB 集合概念解析集合（Collection）是 MongoDB 中组织文档的核心逻辑单元，类似于关系型数据库中的“表”，但其动态模式和灵活结构赋予了更强大的数据管理能力。以下是集合的全面解析：  1. 集合的定义与核心特性 定义：集合是 文档的容器，属于某个数据库（Database），用于逻辑分组具有相似特征的文档。   核心特性：   动态模式（Schema-less）：集合中的文档
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-09 22:24" pubdate>
+              2025-04-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/09/MongoDB%E6%96%87%E6%A1%A3%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+          MongoDB 文档概念解析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/09/MongoDB%E6%96%87%E6%A1%A3%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+        <div>
+          MongoDB 文档概念解析文档（Document）是 MongoDB 的核心数据单元，理解其结构、特性和操作方式是高效使用 MongoDB 的关键。以下是详细解析：  1. 文档的定义与结构 定义：MongoDB 文档是 键值对（Key-Value Pairs）的集合，采用类似 JSON 的 BSON（Binary JSON） 格式存储。   核心特点：   动态模式（Schema-less）：
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-09 22:13" pubdate>
+              2025-04-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/08/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+          MongoDB 数据库概念解析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+        <div>
+          MongoDB 数据库概念解析1. 数据模型与核心概念MongoDB 是一种 文档型数据库，其数据模型基于灵活的文档结构，与关系型数据库（RDBMS）有显著差异。以下是核心概念的详细解析：  1.1 文档（Document） 定义：MongoDB 的基本数据单元，以 BSON（Binary JSON） 格式存储，本质是一个键值对集合。   特点：   支持嵌套结构（如对象、数组）。   字段可动态
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 21:52" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/08/MongoDB%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+          MongoDB 概念解析
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/MongoDB%E6%A6%82%E5%BF%B5%E8%A7%A3%E6%9E%90/" target="_blank">
+        <div>
+          MongoDB 概念解析1. SQL 与 MongoDB 术语对比下表展示了传统关系型数据库（如 MySQL）与 MongoDB 的核心术语对比：    SQL 术语 MongoDB 术语 说明    数据库（Database） 数据库（Database） 逻辑容器，存储数据的顶层单元。   表（Table） 集合（Collection） 表存储结构化数据（行和列），集合存储无模式的文档（BSON
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 21:43" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="category-chain-item">基础概念</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/08/MongoDB-Shell/" target="_blank">
+          MongoDB Shell
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/MongoDB-Shell/" target="_blank">
+        <div>
+          MongoDB Shell启动 MongoDB Shell： 在命令行中输入 mongosh 命令，启动 MongoDB Shell，如果 MongoDB 服务器运行在本地默认端口（27017），则可以直接连接。 1mongosh  查看版本： 1mongosh --version  连接到 MongoDB 服务器： 如果 MongoDB 服务器运行在非默认端口或者远程服务器上，可以使用以下命令连
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 21:37" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E4%BB%8B%E7%BB%8D/" class="category-chain-item">介绍</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/08/NoSQL%E4%BB%8B%E7%BB%8D/" target="_blank">
+          NoSQL 介绍
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/NoSQL%E4%BB%8B%E7%BB%8D/" target="_blank">
+        <div>
+          NoSQL 介绍1. 什么是 NoSQL？NoSQL（Not Only SQL） 是一种非关系型数据库的统称，旨在解决传统关系型数据库（如 MySQL、Oracle）在大数据、高并发和灵活数据模型场景下的局限性。    核心特点：   无固定表结构（Schema-less），支持灵活的数据格式（如 JSON、键值对、文档、图结构等）。   分布式架构，易于横向扩展（Scale-out）。   弱化
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 21:23" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E4%BB%8B%E7%BB%8D/" class="category-chain-item">介绍</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/08/MongoDB%E7%AE%80%E4%BB%8B/" target="_blank">
+          MongoDB 简介
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/08/MongoDB%E7%AE%80%E4%BB%8B/" target="_blank">
+        <div>
+          MongoDB 简介 1. MongoDB 简介MongoDB 是一款开源的 NoSQL 数据库，属于 文档型数据库（Document-Oriented Database）。与传统的关系型数据库（如 MySQL、Oracle）不同，MongoDB 以灵活的 JSON-like 格式（BSON） 存储数据，支持动态模式（Schema-less），适合处理非结构化或半结构化数据。    发布于 200
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-08 21:14" pubdate>
+              2025-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/" class="category-chain-item">MongoDB</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/%E4%BB%8B%E7%BB%8D/" class="category-chain-item">介绍</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/MongoDB/">#MongoDB</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/%E9%A2%9C%E8%89%B2%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8/" target="_blank">
+          颜色码对照表
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/%E9%A2%9C%E8%89%B2%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8/" target="_blank">
+        <div>
+          颜色码对照表   英文代码 形象描述 十六进制 RGB    LightPink 浅粉红 #FFB6C1 255,182,193   Pink 粉红 #FFC0CB 255,192,203   Crimson 猩红 #DC143C 220,20,60   LavenderBlush 脸红的淡紫色 #FFF0F5 255,240,245   PaleVioletRed 苍白的紫罗兰红色 #DB709
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:45" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/Clash%E5%92%8CShadowrocket%E5%8F%AF%E7%94%A8%E7%9A%84%E6%B5%8B%E9%80%9F204URL/" target="_blank">
+          Clash 和 Shadowrocket 可用的测速 204 URL
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/Clash%E5%92%8CShadowrocket%E5%8F%AF%E7%94%A8%E7%9A%84%E6%B5%8B%E9%80%9F204URL/" target="_blank">
+        <div>
+          Clash 和 Shadowrocket 可用的测速 204 URL   供应商 链接    Google Chrome https://www.gstatic.com/generate_204   Google Chrome https://www.google.com/generate_204   Google Chrome https://connectivitycheck.gstatic.
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:37" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Clash/">#Clash</a>
+            
+              <a href="/tags/VPN/">#VPN</a>
+            
+              <a href="/tags/%E7%BF%BB%E5%A2%99/">#翻墙</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%81%94%E7%BD%91/">#国际联网</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BClash%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%BB%B6%E8%BF%9F/" target="_blank">
+          如何查看Clash的真实延迟
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BClash%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%BB%B6%E8%BF%9F/" target="_blank">
+        <div>
+          如何查看Clash的真实延迟Clash for Windows的这个测试是不准确的。它有一个设置，路径是 Settings 设置 → Proxies 代理 → Latency Test URL 延迟测试链接。当你测速时，它就是访问这个链接并给出你访问该URL的速度，并且默认是超过3000ms就会显示超时。 有些机场可以在入口做劫持，那你看到的延迟其实是你到国内中转服务器的延迟，那可能就会是很低的，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:34" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Clash/">#Clash</a>
+            
+              <a href="/tags/VPN/">#VPN</a>
+            
+              <a href="/tags/%E7%BF%BB%E5%A2%99/">#翻墙</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%81%94%E7%BD%91/">#国际联网</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/Clash%E5%BB%B6%E8%BF%9F%E9%AB%98%E6%88%96%E8%8A%82%E7%82%B9%E5%85%A8%E7%BA%A2%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank">
+          Clash 延迟高或节点全红的问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/Clash%E5%BB%B6%E8%BF%9F%E9%AB%98%E6%88%96%E8%8A%82%E7%82%B9%E5%85%A8%E7%BA%A2%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank">
+        <div>
+          Clash 延迟高或节点全红的问题有可能配置文件内没有&#x2F;没有正确配置DNS。 手动配置DNS，建议在配置文件内修改而不是系统的。 有关DNS可以查看之前发布的全球DNS。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:31" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Clash/">#Clash</a>
+            
+              <a href="/tags/VPN/">#VPN</a>
+            
+              <a href="/tags/%E7%BF%BB%E5%A2%99/">#翻墙</a>
+            
+              <a href="/tags/%E5%9B%BD%E9%99%85%E8%81%94%E7%BD%91/">#国际联网</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/%E5%A6%82%E4%BD%95%E5%9C%A8Windows10%E4%B8%8A%E6%81%A2%E5%A4%8D%E4%B8%A2%E5%A4%B1%E7%9A%84%E9%BB%98%E8%AE%A4%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92/" target="_blank">
+          如何在 Windows10 上恢复丢失的默认电源计划
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/%E5%A6%82%E4%BD%95%E5%9C%A8Windows10%E4%B8%8A%E6%81%A2%E5%A4%8D%E4%B8%A2%E5%A4%B1%E7%9A%84%E9%BB%98%E8%AE%A4%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92/" target="_blank">
+        <div>
+          如何在 Windows10 上恢复丢失的默认电源计划Windows 11 和 10 附带预设电源计划：高性能、省电、平衡，有时还有卓越性能。您可以在这些计划之间进行切换，以获得最佳性能、更长的电池寿命或两者兼得。一些笔记本电脑制造商（例如 HP）有自己的电源计划。 根据您的系统硬件规格，您可能会在“电源选项”面板中看到三个或四个电源计划。平衡、省电和高性能是所有 Windows 计算机中最常见的。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:20" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/07/Windows10%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92%E6%97%A0%E9%AB%98%E6%80%A7%E8%83%BD%E5%8F%AA%E6%9C%89%E5%B9%B3%E8%A1%A1%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_blank">
+          Windows10 电源计划无高性能只有平衡选项问题解决方法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/07/Windows10%E7%94%B5%E6%BA%90%E8%AE%A1%E5%88%92%E6%97%A0%E9%AB%98%E6%80%A7%E8%83%BD%E5%8F%AA%E6%9C%89%E5%B9%B3%E8%A1%A1%E9%80%89%E9%A1%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_blank">
+        <div>
+          Windows10 电源计划无高性能只有平衡选项问题解决方法  按下“Windows键”+“R键”，然后输入regedit，依次点击注册表左侧的：HKEY_LOCAL_MACHINE、SYSTEM、CurrentControlSet、Control、Power 右侧可以看到CsEnabled选项，双击，将数值“1”改为“0”，然后点击确定，最后重启电脑  若找不到CsEnabled选项，以管理员模
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-07 16:08" pubdate>
+              2025-04-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Windows/" class="category-chain-item">Windows</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Windows/">#Windows</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/04/05/%E5%90%84%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/" target="_blank">
+          各开源协议详解
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/04/05/%E5%90%84%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/" target="_blank">
+        <div>
+          各开源协议详解   特性&#x2F;许可证 Apache 2.0 GPL 3.0 MIT BSD 2-Clause BSD 3-Clause Boost 1.0 CC0 1.0 Eclipse 2.0 AGPL 3.0 GPL 2.0 LGPL 2.1 MPL 2.0    允许闭源分发 是 否 是 是 是 是 是 否 否 否 是 是   是否为Copyleft 否 是 否 否 否 否 否 否 是
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-04-05 13:23" pubdate>
+              2025-04-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/" class="category-chain-item">开源协议</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E6%BA%90/">#开源</a>
+            
+              <a href="/tags/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">#开源协议</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <!--<a href="https://hexo.io" target="_blank" rel="nofollow noopener"> <span>Hexo</span> </a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <span>Fluid</span> </a>--> <a href="https://github.com/Grey-Wind" target="_blank" rel="nofollow noopener"> <span>Grey-Wind</span> </a> <i class="iconfont icon-love"></i> <a href="https://qingyi-studio.top/" target="_blank" rel="nofollow noopener"> <span>QingYi Studio</span> </a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":true,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
