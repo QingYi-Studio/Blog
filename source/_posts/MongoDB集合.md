@@ -17,7 +17,7 @@ MongoDB 中使用 **createCollection()** 方法来创建集合。
 
 语法格式：
 
-```sql
+```javascript
 db.createCollection(name, options)
 ```
 
@@ -44,7 +44,7 @@ options 可以是如下参数：
 
 示例代码：
 
-```sql
+```javascript
 db.createCollection("myComplexCollection", {
   capped: true,
   size: 10485760,
@@ -93,7 +93,7 @@ renameCollection  方法在 MongoDB 的 admin 数据库中运行，可以将一�
 
 renameCollection 命令的语法：
 
-```sql
+```javascript
 db.adminCommand({
   renameCollection: "sourceDb.sourceCollection",
   to: "targetDb.targetCollection",
@@ -113,13 +113,13 @@ db.adminCommand({
 
 1. 确保已连接到 test 数据库
 
-```sql
+```javascript
 use test
 ```
 
 2. 运行 renameCollection 命令
 
-```sql
+```javascript
 db.adminCommand({ 
   renameCollection: "test.oldCollection", 
   to: "test.newCollection" 
@@ -128,7 +128,7 @@ db.adminCommand({
 
 如果你要将集合重命名到另一个数据库，例如将 test 数据库中的 oldCollection 重命名为 production 数据库中的 newCollection，可以这样做：
 
-```sql
+```javascript
 db.adminCommand({ 
   renameCollection: "test.oldCollection", 
   to: "production.newCollection" 
@@ -145,7 +145,7 @@ db.adminCommand({
 
 重命名后，可以通过以下命令检查新的集合是否存在：
 
-```sql
+```javascript
 use test
 show collections
 ```
@@ -160,7 +160,7 @@ drop() 方法可以永久地从数据库中删除指定的集合及其所有文�
 
 **语法格式：**
 
-```sql
+```javascript
 db.collection.drop()
 ```
 

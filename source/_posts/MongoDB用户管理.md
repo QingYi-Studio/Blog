@@ -45,7 +45,7 @@ use <database_name>
 
 例如，创建一个名为 testuser 的用户，密码为 password123，并赋予 readWrite 和 dbAdmin 角色：
 
-```sql
+```javascript
 db.createUser({
   user:"testuser",
   pwd:"password123",
@@ -60,7 +60,7 @@ db.createUser({
 
 创建用户后，你可以使用 db.auth 命令验证用户身份：
 
-```sql
+```javascript
 db.auth("testuser","password123")
 ```
 
@@ -91,7 +91,7 @@ mongosh --host <hostname>--port <port>-u "testuser"-p "password123"--authenticat
 
 例如，删除名为 testuser 的用户：
 
-```sql
+```javascript
 db.dropUser("testuser")
 ```
 
@@ -111,7 +111,7 @@ use testdb
 
 创建 testuser 用户：
 
-```sql
+```javascript
 db.createUser({
   user:"testuser",
   pwd:"password123",
@@ -142,6 +142,6 @@ mongosh --host localhost --port 27017-u "testuser"-p "password123"--authenticati
 
 删除 testuser 用户：
 
-```sql
+```javascript
 db.dropUser("testuser")
 ```
