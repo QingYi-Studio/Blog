@@ -38,7 +38,7 @@ ObjectId 类似唯一主键，可以很快的去生成和排序，包含 12 byte
 - 紧接的两个字节由进程 id 组成 PID
 - 最后三个字节是随机数
 
-![](https://www.runoob.com/wp-content/uploads/2013/10/2875754375-5a19268f0fd9b_articlex.jpeg)
+![Object Id](https://blog-assets.qingyi-studio.top/MongoDB/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/ObjectId.jpeg)
 
 MongoDB 中存储的文档必须有一个 _id 键。这个键的值可以是任何类型的，默认是个 ObjectId 对象
 
@@ -63,7 +63,7 @@ BSON 有一个特殊的时间戳类型用于 MongoDB 内部使用，与普通的
 
 表示当前距离 Unix新纪元（1970年1月1日）的毫秒数。日期类型是有符号的, 负数表示 1970 年之前的日期。
 
-```sql
+```javascript
 > var mydate1 = new Date()     //格林尼治时间
 > mydate1
 ISODate("2018-03-04T14:58:51.233Z")
@@ -71,7 +71,7 @@ ISODate("2018-03-04T14:58:51.233Z")
 object
 ```
 
-```sql
+```javascript
 > var mydate2 = ISODate() //格林尼治时间
 > mydate2
 ISODate("2018-03-04T15:00:45.479Z")
@@ -83,7 +83,7 @@ object
 
 返回一个时间类型的字符串：
 
-```sql
+```javascript
 > var mydate1str = mydate1.toString()
 > mydate1str
 Sun Mar 04 2018 14:58:51 GMT+0000 (UTC) 
@@ -93,7 +93,7 @@ string
 
 或者
 
-```sql
+```javascript
 > Date()
 Sun Mar 04 2018 15:02:59 GMT+0000 (UTC)   
 ```

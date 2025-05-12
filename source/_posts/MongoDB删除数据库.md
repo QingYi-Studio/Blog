@@ -13,7 +13,7 @@ categories:
 
 MongoDB 删除数据库的语法格式如下：
 
-```sql
+```javascript
 db.dropDatabase()
 ```
 
