@@ -28,14 +28,14 @@
 <meta property="og:site_name" content="青衣的博客">
 <meta property="og:description" content="MongoDB 数据类型   数据类型 描述    String 字符串。存储数据常用的数据类型。在 MongoDB 中，UTF-8 编码的字符串才是合法的。   Integer 整型数值。用于存储数值。根据你所采用的服务器，可分为 32 位或 64 位。   Boolean 布尔值。用于存储布尔值（真&#x2F;假）。   Double 双精度浮点值。用于存储浮点值。   Min&#x2F;Ma">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2013/10/2875754375-5a19268f0fd9b_articlex.jpeg">
+<meta property="og:image" content="https://blog-assets.qingyi-studio.top/MongoDB/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/ObjectId.jpeg">
 <meta property="article:published_time" content="2025-04-19T16:00:10.000Z">
-<meta property="article:modified_time" content="2025-05-07T09:30:47.875Z">
+<meta property="article:modified_time" content="2025-05-12T14:32:46.058Z">
 <meta property="article:author" content="QingYi Studio">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="MongoDB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2013/10/2875754375-5a19268f0fd9b_articlex.jpeg">
+<meta name="twitter:image" content="https://blog-assets.qingyi-studio.top/MongoDB/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/ObjectId.jpeg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -322,7 +322,7 @@
               <p id="updated-time" class="note note-primary" style="display: none">
                 
                   
-                    本文最后更新于 2025-05-07T17:30:47+08:00
+                    本文最后更新于 2025-05-12T22:32:46+08:00
                   
                   
 
@@ -407,7 +407,7 @@
 <li>紧接的两个字节由进程 id 组成 PID</li>
 <li>最后三个字节是随机数</li>
 </ul>
-<p><img src="https://www.runoob.com/wp-content/uploads/2013/10/2875754375-5a19268f0fd9b_articlex.jpeg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://blog-assets.qingyi-studio.top/MongoDB/MongoDB%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/ObjectId.jpeg" srcset="/img/loading.gif" lazyload alt="Object Id"></p>
 <p>MongoDB 中存储的文档必须有一个 _id 键。这个键的值可以是任何类型的，默认是个 ObjectId 对象</p>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>BSON 字符串都是 UTF-8 编码。</p>
 <h2 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h2><p>BSON 有一个特殊的时间戳类型用于 MongoDB 内部使用，与普通的 日期 类型不相关。 时间戳值是一个 64 位的值。其中：</p>
@@ -421,16 +421,16 @@
 <p>BSON 时间戳类型主要用于 MongoDB 内部使用。在大多数情况下的应用开发中，你可以使用 BSON 日期类型。</p>
 </blockquote>
 <h2 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h2><p>表示当前距离 Unix新纪元（1970年1月1日）的毫秒数。日期类型是有符号的, 负数表示 1970 年之前的日期。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-operator">&gt;</span> var mydate1 <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Date</span>()     <span class="hljs-operator">/</span><span class="hljs-operator">/</span>格林尼治时间<br><span class="hljs-operator">&gt;</span> mydate1<br>ISODate(&quot;2018-03-04T14:58:51.233Z&quot;)<br><span class="hljs-operator">&gt;</span> typeof mydate1<br>object<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&gt; <span class="hljs-keyword">var</span> mydate1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>()     <span class="hljs-comment">//格林尼治时间</span><br>&gt; mydate1<br><span class="hljs-title class_">ISODate</span>(<span class="hljs-string">&quot;2018-03-04T14:58:51.233Z&quot;</span>)<br>&gt; <span class="hljs-keyword">typeof</span> mydate1<br>object<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-operator">&gt;</span> var mydate2 <span class="hljs-operator">=</span> ISODate() <span class="hljs-operator">/</span><span class="hljs-operator">/</span>格林尼治时间<br><span class="hljs-operator">&gt;</span> mydate2<br>ISODate(&quot;2018-03-04T15:00:45.479Z&quot;)<br><span class="hljs-operator">&gt;</span> typeof mydate2<br>object<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&gt; <span class="hljs-keyword">var</span> mydate2 = <span class="hljs-title class_">ISODate</span>() <span class="hljs-comment">//格林尼治时间</span><br>&gt; mydate2<br><span class="hljs-title class_">ISODate</span>(<span class="hljs-string">&quot;2018-03-04T15:00:45.479Z&quot;</span>)<br>&gt; <span class="hljs-keyword">typeof</span> mydate2<br>object<br></code></pre></td></tr></table></figure>
 
 <p>这样创建的时间是日期类型，可以使用 JS 中的 Date 类型的方法。</p>
 <p>返回一个时间类型的字符串：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-operator">&gt;</span> var mydate1str <span class="hljs-operator">=</span> mydate1.toString()<br><span class="hljs-operator">&gt;</span> mydate1str<br>Sun Mar <span class="hljs-number">04</span> <span class="hljs-number">2018</span> <span class="hljs-number">14</span>:<span class="hljs-number">58</span>:<span class="hljs-number">51</span> GMT<span class="hljs-operator">+</span><span class="hljs-number">0000</span> (UTC) <br><span class="hljs-operator">&gt;</span> typeof mydate1str<br>string<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&gt; <span class="hljs-keyword">var</span> mydate1str = mydate1.<span class="hljs-title function_">toString</span>()<br>&gt; mydate1str<br><span class="hljs-title class_">Sun</span> <span class="hljs-title class_">Mar</span> <span class="hljs-number">04</span> <span class="hljs-number">2018</span> <span class="hljs-number">14</span>:<span class="hljs-number">58</span>:<span class="hljs-number">51</span> <span class="hljs-variable constant_">GMT</span>+<span class="hljs-number">0000</span> (<span class="hljs-variable constant_">UTC</span>) <br>&gt; <span class="hljs-keyword">typeof</span> mydate1str<br>string<br></code></pre></td></tr></table></figure>
 
 <p>或者</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-operator">&gt;</span> <span class="hljs-type">Date</span>()<br>Sun Mar <span class="hljs-number">04</span> <span class="hljs-number">2018</span> <span class="hljs-number">15</span>:<span class="hljs-number">02</span>:<span class="hljs-number">59</span> GMT<span class="hljs-operator">+</span><span class="hljs-number">0000</span> (UTC)   <br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&gt; <span class="hljs-title class_">Date</span>()<br><span class="hljs-title class_">Sun</span> <span class="hljs-title class_">Mar</span> <span class="hljs-number">04</span> <span class="hljs-number">2018</span> <span class="hljs-number">15</span>:<span class="hljs-number">02</span>:<span class="hljs-number">59</span> <span class="hljs-variable constant_">GMT</span>+<span class="hljs-number">0000</span> (<span class="hljs-variable constant_">UTC</span>)   <br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -510,7 +510,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年5月7日</div>
+          <div>2025年5月12日</div>
         </div>
       
       

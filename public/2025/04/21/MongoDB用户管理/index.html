@@ -29,7 +29,7 @@
 <meta property="og:description" content="MongoDB 用户管理使用 MongoDB Shell (mongo) 管理用户以下是使用 MongoDB Shell (mongosh) 进行用户管理的详细说明，包括创建用户、分配角色、认证和登录的具体步骤。 1. 连接到 MongoDB 首先，打开你的终端并使用 mongosh 命令连接到 MongoDB 服务器： mongosh –host &lt;hostname&gt; –port &amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-21T13:59:10.000Z">
-<meta property="article:modified_time" content="2025-05-07T09:30:47.891Z">
+<meta property="article:modified_time" content="2025-05-12T14:32:46.064Z">
 <meta property="article:author" content="QingYi Studio">
 <meta property="article:tag" content="数据库">
 <meta property="article:tag" content="MongoDB">
@@ -320,7 +320,7 @@
               <p id="updated-time" class="note note-primary" style="display: none">
                 
                   
-                    本文最后更新于 2025-05-07T17:30:47+08:00
+                    本文最后更新于 2025-05-12T22:32:46+08:00
                   
                   
 
@@ -356,11 +356,11 @@
 <p><strong>3. 创建用户</strong></p>
 <p>使用 db.createUser 命令创建用户并分配角色。</p>
 <p>例如，创建一个名为 testuser 的用户，密码为 password123，并赋予 readWrite 和 dbAdmin 角色：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql">db.createUser(&#123;<br>  <span class="hljs-keyword">user</span>:&quot;testuser&quot;,<br>  pwd:&quot;password123&quot;,<br>  roles:[<br>    &#123; role:&quot;readWrite&quot;, db:&quot;&lt;database_name&gt;&quot;&#125;,<br>    &#123; role:&quot;dbAdmin&quot;, db:&quot;&lt;database_name&gt;&quot;&#125;<br>  ]<br>&#125;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">db.<span class="hljs-title function_">createUser</span>(&#123;<br>  <span class="hljs-attr">user</span>:<span class="hljs-string">&quot;testuser&quot;</span>,<br>  <span class="hljs-attr">pwd</span>:<span class="hljs-string">&quot;password123&quot;</span>,<br>  <span class="hljs-attr">roles</span>:[<br>    &#123; <span class="hljs-attr">role</span>:<span class="hljs-string">&quot;readWrite&quot;</span>, <span class="hljs-attr">db</span>:<span class="hljs-string">&quot;&lt;database_name&gt;&quot;</span>&#125;,<br>    &#123; <span class="hljs-attr">role</span>:<span class="hljs-string">&quot;dbAdmin&quot;</span>, <span class="hljs-attr">db</span>:<span class="hljs-string">&quot;&lt;database_name&gt;&quot;</span>&#125;<br>  ]<br>&#125;)<br></code></pre></td></tr></table></figure>
 
 <p><strong>4. 验证用户</strong></p>
 <p>创建用户后，你可以使用 db.auth 命令验证用户身份：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">db.auth(&quot;testuser&quot;,&quot;password123&quot;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">db.<span class="hljs-title function_">auth</span>(<span class="hljs-string">&quot;testuser&quot;</span>,<span class="hljs-string">&quot;password123&quot;</span>)<br></code></pre></td></tr></table></figure>
 
 <p><strong>5. 启用身份验证</strong></p>
 <p>为了确保只有经过身份验证的用户才能访问 MongoDB，需要启用身份验证。</p>
@@ -375,7 +375,7 @@
 <p><strong>7. 删除用户</strong></p>
 <p>使用 <strong>db.dropUser</strong> 命令删除指定用户。</p>
 <p>例如，删除名为 testuser 的用户：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">db.dropUser(&quot;testuser&quot;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">db.<span class="hljs-title function_">dropUser</span>(<span class="hljs-string">&quot;testuser&quot;</span>)<br></code></pre></td></tr></table></figure>
 
 <h3 id="实例操作示例"><a href="#实例操作示例" class="headerlink" title="实例操作示例"></a>实例操作示例</h3><p>启动 MongoDB Shell 并连接到服务器：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mongosh --host localhost --port 27017<br></code></pre></td></tr></table></figure>
@@ -384,7 +384,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">use testdb<br></code></pre></td></tr></table></figure>
 
 <p>创建 testuser 用户：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql">db.createUser(&#123;<br>  <span class="hljs-keyword">user</span>:&quot;testuser&quot;,<br>  pwd:&quot;password123&quot;,<br>  roles:[&#123; role:&quot;readWrite&quot;, db:&quot;testdb&quot;&#125;]<br>&#125;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">db.<span class="hljs-title function_">createUser</span>(&#123;<br>  <span class="hljs-attr">user</span>:<span class="hljs-string">&quot;testuser&quot;</span>,<br>  <span class="hljs-attr">pwd</span>:<span class="hljs-string">&quot;password123&quot;</span>,<br>  <span class="hljs-attr">roles</span>:[&#123; <span class="hljs-attr">role</span>:<span class="hljs-string">&quot;readWrite&quot;</span>, <span class="hljs-attr">db</span>:<span class="hljs-string">&quot;testdb&quot;</span>&#125;]<br>&#125;)<br></code></pre></td></tr></table></figure>
 
 <p><strong>启用身份验证并重启 MongoDB 实例</strong></p>
 <p>编辑 mongod.conf 文件，添加以下内容：</p>
@@ -397,7 +397,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mongosh --host localhost --port 27017-u &quot;testuser&quot;-p &quot;password123&quot;--authenticationDatabase &quot;testdb&quot;<br></code></pre></td></tr></table></figure>
 
 <p>删除 testuser 用户：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">db.dropUser(&quot;testuser&quot;)<br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">db.<span class="hljs-title function_">dropUser</span>(<span class="hljs-string">&quot;testuser&quot;</span>)<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -478,7 +478,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年5月7日</div>
+          <div>2025年5月12日</div>
         </div>
       
       
