@@ -2,6 +2,7 @@
 title: 如何在 Windows10 上恢复丢失的默认电源计划
 date: 2025-04-07 16:20:04
 tags:
+- Windows
 ---
 
 # 如何在 Windows10 上恢复丢失的默认电源计划
